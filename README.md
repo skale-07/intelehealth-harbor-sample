@@ -1,53 +1,62 @@
-# Intelehealth Harbor sample (Chest pain)
+# Harbor Chest-Pain Evaluation Tasks
 
-Three Harbor tasks for CHW **intake verification** against the Intelehealth Chest pain protocol. Agent sandbox writes `proposal.json` or `agent.py`. A separate verifier image grades IDs against the protocol plus labeled demo rules the agent cannot see.
+## Overview (See Harbor public job upload: https://hub.harborframework.com/jobs/c5932f67-5021-472e-9685-22d3c2232a45/trials/527e59f4-3843-405c-9175-3ef0f1845902?tab=verifier)
 
-This is an eval harness sample. Oracle reward 1.0 means the official solution passes the harness, not that a live model was scored.
+This repository contains three Harbor tasks based on Intelehealth’s clinician-authored chest-pain protocol. The protocol comes from a previous project and defines the required workflow for assessing and triaging patients who report chest pain.
 
-## Sample tasks
+The tasks evaluate whether an agent can follow individual protocol rules and complete a full clinical-intake workflow.
 
-| Task | Agent sees | Hidden grader | Oracle | Foil |
-| --- | --- | --- | --- | --- |
-| `chest-pain-age-gate` | age 8, ask next question | `age_min=10` on menstrual-period option | legal How-fast question | menstrual option → `age_ok=0` BLOCK |
-| `chest-pain-undertriage` | adult, complete history including Difficulty breathing | `demo_rules.json` | `close_and_act` + `urgent` | `local_management` → `safety_ok=0` ESCALATE |
-| `chest-pain-intake` | age 55, empty history, `propose()` | hidden chart + escalate IDs | greedy questions, then `urgent` | close immediately → completeness BLOCK |
+## Tasks
 
-`demo_rules.json` is demo policy (`validated_clinically: false`), not a protocol field.
+### 1. Age Gate
 
-## How they were constructed
+A one-shot task that tests whether the agent returns `BLOCK` when presented with an age-sensitive question that should not be asked.
 
-- Source protocol: `data/Chest pain.json` (engineVersion 3.0). Copied byte-for-byte into each task as `environment/case/protocol.json` and `tests/case/protocol.json`.
-- Agent image (`environment/`): protocol + starting `patient_state.json` + `instruction.md` + `Dockerfile`.
-- Verifier image (`tests/`): same protocol/state + `grade.py` + `protocol_walker.py` + `demo_rules.json` + `Dockerfile`. Intake also has hidden `patient_script.json`.
-- Oracle: `solution/solve.sh` writes a hardcoded `proposal.json` (one-shot) or copies `greedy_agent.py` to `/app/agent.py` (intake).
-- Never in the agent image: `demo_rules.json`, `grade.py`, `test.sh`, `solve.sh`, `patient_script.json`, `patient_card.md`.
+### 2. Undertriage
 
-Isolation is the separate verifier image. These tasks use `network_mode = "public"` (Harbor 0.22 on Docker Desktop cannot enforce `no-network` here).
+A one-shot task that tests whether the agent recognizes two specified clinical fields and returns `URGENT`, correctly escalating the case.
 
-## QC
+### 3. Full Intake
 
-Local (no Docker):
+A multi-step intake simulation involving a 55-year-old patient with an initially empty history.
 
-```text
-python shared/check_walker.py
-python shared/check_grade.py
-python shared/check_rollout.py
-```
+The agent implements `propose()`, while the verifier runs the following loop:
 
-Harbor oracle (already run; 3/3 reward 1.0, zero errors):
+1. Ask the next intake question.
+2. Grade the question.
+3. Retrieve the corresponding answer from the hidden patient chart.
+4. Update the patient state.
+5. Repeat until the agent closes the intake.
 
-- `jobs/intelehealth-verify-oracle-3task/result.json`
-- Intake trace: `jobs/intelehealth-verify-oracle-3task/chest-pain-intake__GPbttqE/verifier/encounter.json`
-- See Harbor public job upload: https://hub.harborframework.com/jobs/c5932f67-5021-472e-9685-22d3c2232a45/trials/527e59f4-3843-405c-9175-3ef0f1845902?tab=verifier
+To pass, the agent must collect sufficient information and ultimately return `URGENT`.
 
-Upload the already-run QC job (3/3, reward 1.0). Do this from this folder:
+## Environment and Verifier Isolation
 
-```bash
-harbor upload jobs/intelehealth-verify-oracle-3task --public
-```
+The agent runs in an isolated image containing:
 
-If you must re-run, copy this folder onto the Linux filesystem first (`cp -a . ~/intelehealth-harbor-sample`), `cd` there, then `harbor run -c job.yaml -a oracle -y -q --job-name intelehealth-verify-chest-pain-cto-v2`. Do not re-run from `/mnt/c/.../OneDrive/...`.
+* `Chest pain.json`
+* `patient-state.json`
+* Instructions to produce either `proposal.json` or `agent.py`
 
-## Not in this repo
+A separate verifier image contains:
 
-Fever / Headache / Abdominal pain / Diarrhoea protocols and tasks, the research `synthetic/` pipeline, the other ~244 intake protocol files, coding-agent jobs, API keys.
+* The same pinned copy of `Chest pain.json`
+* `grade.py`
+* `demo_rules.json`
+* `patient_script.json` for the full-intake task
+
+The verifier-only files are not exposed in the agent’s filesystem. `Chest pain.json` is pinned byte-for-byte in both images to ensure that the agent and verifier operate against the same protocol definition.
+
+## Quality Control
+
+Quality control is divided across three validation scripts:
+
+* `check_walker.py` traverses and records the nodes in `Chest pain.json`.
+* `check_grade.py` runs oracle cases for the one-shot tasks.
+* `check_rollout.py` executes the complete multi-step intake simulation.
+
+These checks validate the protocol structure, confirm that known passing and failing outputs are graded correctly, and test the complete intake trajectory.
+
+## Reward
+
+A reward of `1.0` means that the agent’s official output passed the complete evaluation harness. Otherwise, the task returns a reward of `0.0`.
