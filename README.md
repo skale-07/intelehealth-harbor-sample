@@ -46,8 +46,6 @@ Upload the already-run QC job (3/3, reward 1.0). Do this from this folder:
 harbor upload jobs/intelehealth-verify-oracle-3task --public
 ```
 
-Do not upload `jobs/intelehealth-verify-chest-pain-cto`. That re-run died in Harbor after the oracle wrote `proposal.json`: WSL lost its cwd (`FileNotFoundError` with no path) while mounting the verifier. Ignore that job.
-
 If you must re-run, copy this folder onto the Linux filesystem first (`cp -a . ~/intelehealth-harbor-sample`), `cd` there, then `harbor run -c job.yaml -a oracle -y -q --job-name intelehealth-verify-chest-pain-cto-v2`. Do not re-run from `/mnt/c/.../OneDrive/...`.
 
 ## Not in this repo
