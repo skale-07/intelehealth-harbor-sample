@@ -1,0 +1,10 @@
+{
+    "job_name": "intelehealth-verify-chest-pain-cto",
+    "n_concurrent_trials": 1,
+    "quiet": true,
+    "datasets": [
+        {
+            "path": "datasets/intelehealth-verify"
+        }
+    ]
+}

@@ -1,0 +1,27 @@
+{
+  "verdict": "ALLOW",
+  "reasons": [],
+  "evidence": [],
+  "rules_checked": [
+    "schema_valid",
+    "legal_id",
+    "age_ok",
+    "nesting_ok",
+    "completeness_ok",
+    "safety_ok"
+  ],
+  "criteria": {
+    "schema_valid": 1.0,
+    "legal_id": 1.0,
+    "age_ok": 1.0,
+    "nesting_ok": 1.0,
+    "completeness_ok": 1.0,
+    "safety_ok": 1.0
+  },
+  "reward": 1.0,
+  "verifier_version": "0.1.0",
+  "protocol_id": "ID_c492cec3-f0e8-4ab1-8b31-fd2f3b557e0b",
+  "protocol_name": "Chest pain",
+  "engine_version": "3.0",
+  "ground_truth_version": "protocol.json"
+}

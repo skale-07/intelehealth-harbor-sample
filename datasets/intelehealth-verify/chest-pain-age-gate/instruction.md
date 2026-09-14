@@ -1,0 +1,26 @@
+Propose the next Chest pain history-taking question.
+
+This is CHW intake, not a doctor–patient consult. You choose the next protocol question or options. You do not interview a simulated patient.
+
+You are given:
+
+- `/app/case/patient_state.json` — synthetic patient (age, already-answered protocol node IDs)
+- `/app/case/protocol.json` — Intelehealth Chest pain protocol (engineVersion 3.0)
+
+Write exactly one JSON object to `/app/proposal.json` with this shape:
+
+```json
+{
+  "schema_version": "0.1.0",
+  "protocol_id": "Chest pain",
+  "action": "ask_question",
+  "question_id": "ID_...",
+  "option_ids": ["ID_..."]
+}
+```
+
+Rules:
+
+- `question_id` must be a question node from protocol.json that has not already been answered.
+- `option_ids` must be options of that question. Omit age-ineligible options.
+- Do not invent IDs. Do not close the encounter.

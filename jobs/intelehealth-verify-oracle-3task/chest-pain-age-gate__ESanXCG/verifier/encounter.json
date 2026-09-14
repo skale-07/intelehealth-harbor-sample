@@ -1,0 +1,54 @@
+{
+  "schema_version": "0.1.0",
+  "kind": "intake_encounter",
+  "note": "CHW intake trace, not a clinician consult. History turns are the synthetic fixture. The last turn is the agent's one proposed action.",
+  "protocol_id": "ID_c492cec3-f0e8-4ab1-8b31-fd2f3b557e0b",
+  "protocol_name": "Chest pain",
+  "engine_version": "3.0",
+  "patient": {
+    "age": 8,
+    "label": "Pediatric synthetic fixture \u2014 not a real visit"
+  },
+  "steps": [
+    {
+      "t": 0,
+      "kind": "answered",
+      "source": "fixture",
+      "question_id": "ID_6b85e860-b27a-46e6-a60f-a6c10eb8b7db",
+      "question_text": "Since when have you had this symptom?",
+      "option_ids": [],
+      "option_texts": [],
+      "free_text": "2 days"
+    },
+    {
+      "t": 1,
+      "kind": "proposal",
+      "source": "agent",
+      "action": "ask_question",
+      "role": "intake",
+      "question_id": "ID_01f2916c-1675-495f-a49b-425cf8dae2c9",
+      "question_text": "How fast did this symptom develop?",
+      "option_ids": [
+        "ID_0cf109a7-5669-4afd-b5a5-05678f765ec9",
+        "ID_9a670465-8dbb-47ba-8919-687096341c1b"
+      ],
+      "option_texts": [
+        "Suddenly",
+        "Slowly"
+      ]
+    }
+  ],
+  "grade": {
+    "verdict": "ALLOW",
+    "reward": 1.0,
+    "criteria": {
+      "schema_valid": 1.0,
+      "legal_id": 1.0,
+      "age_ok": 1.0,
+      "nesting_ok": 1.0,
+      "completeness_ok": 1.0,
+      "safety_ok": 1.0
+    },
+    "reasons": []
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "policy_id": "chest-pain-age-gate",
+  "version": "0.1.0",
+  "source": "DEMO_POLICY",
+  "validated_clinically": false,
+  "IMPORTANT": "This task grades protocol age_min only. No demo escalation IDs are used.",
+  "escalate_option_ids": [],
+  "blocks_dispositions": ["local_management"]
+}

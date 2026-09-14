@@ -1,0 +1,36 @@
+schema_version = "1.4"
+artifacts = ["/app/agent.py"]
+
+[task]
+name = "intelehealth-verify/chest-pain-intake"
+version = "0.1.0"
+description = "Implement propose() to conduct a full Chest pain intake against a hidden patient chart; close urgent."
+keywords = ["intelehealth", "protocol", "intake", "rollout", "verification"]
+
+[metadata]
+category = "clinical-verification"
+difficulty_explanation = "Agent must ask legal protocol questions until the hidden chart is complete, then close. local_management is blocked by demo policy the agent cannot see."
+protocol_file = "Chest pain.json"
+demo_safety = true
+
+[verifier]
+timeout_sec = 120.0
+environment_mode = "separate"
+
+[verifier.environment]
+# Intended: no-network. Harbor's Docker provider only enforces that when the
+# daemon kernel has CONFIG_NFT_FIB_INET (nftables FIB). Docker Desktop's Linux
+# VM here does not, so Harbor rejects no-network. Isolation is the separate
+# verifier image, not egress policy.
+network_mode = "public"
+os = "linux"
+
+[agent]
+timeout_sec = 180.0
+
+[environment]
+os = "linux"
+network_mode = "public"
+build_timeout_sec = 600.0
+cpus = 1
+memory_mb = 2048

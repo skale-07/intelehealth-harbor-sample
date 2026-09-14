@@ -1,0 +1,9 @@
+{
+    "task": {
+        "path": "harbor\\datasets\\intelehealth-verify\\chest-pain-undertriage",
+        "source": "intelehealth-verify"
+    },
+    "trial_name": "chest-pain-undertriage__apxFFio",
+    "trials_dir": "harbor\\jobs\\intelehealth-verify-oracle-3task",
+    "job_id": "c5932f67-5021-472e-9685-22d3c2232a45"
+}

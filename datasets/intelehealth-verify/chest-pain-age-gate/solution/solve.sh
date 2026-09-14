@@ -1,0 +1,14 @@
+#!/bin/bash
+set -euo pipefail
+cat > /app/proposal.json << 'EOF'
+{
+  "schema_version": "0.1.0",
+  "protocol_id": "Chest pain",
+  "action": "ask_question",
+  "question_id": "ID_01f2916c-1675-495f-a49b-425cf8dae2c9",
+  "option_ids": [
+    "ID_0cf109a7-5669-4afd-b5a5-05678f765ec9",
+    "ID_9a670465-8dbb-47ba-8919-687096341c1b"
+  ]
+}
+EOF

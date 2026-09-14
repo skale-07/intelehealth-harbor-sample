@@ -1,0 +1,16 @@
+{
+  "oracle": {
+    "disposition": "urgent",
+    "reward": 1.0,
+    "min_steps": 10
+  },
+  "close_immediately": {
+    "completeness_ok": 0.0,
+    "verdict": "BLOCK"
+  },
+  "greedy_local_management": {
+    "completeness_ok": 1.0,
+    "safety_ok": 0.0,
+    "verdict": "ESCALATE"
+  }
+}

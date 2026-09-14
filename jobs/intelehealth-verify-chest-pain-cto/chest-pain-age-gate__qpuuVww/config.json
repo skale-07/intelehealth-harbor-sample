@@ -1,0 +1,9 @@
+{
+    "task": {
+        "path": "datasets/intelehealth-verify/chest-pain-age-gate",
+        "source": "intelehealth-verify"
+    },
+    "trial_name": "chest-pain-age-gate__qpuuVww",
+    "trials_dir": "jobs/intelehealth-verify-chest-pain-cto",
+    "job_id": "e45a42d7-e678-4b01-aec2-644ed5f861cc"
+}

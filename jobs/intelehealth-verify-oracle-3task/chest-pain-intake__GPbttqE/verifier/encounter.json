@@ -1,0 +1,618 @@
+{
+  "schema_version": "0.1.0",
+  "kind": "intake_encounter",
+  "note": "CHW intake trace, not a clinician consult. Proposal turns are the agent. Answer turns are the hidden patient_script, applied only after ALLOW. The agent does not author answers.",
+  "protocol_id": "ID_c492cec3-f0e8-4ab1-8b31-fd2f3b557e0b",
+  "protocol_name": "Chest pain",
+  "engine_version": "3.0",
+  "patient": {
+    "age": 55,
+    "label": "Adult synthetic fixture \u2014 not a real visit"
+  },
+  "steps": [
+    {
+      "t": 0,
+      "kind": "proposal",
+      "source": "agent",
+      "action": "ask_question",
+      "role": "intake",
+      "question_id": "ID_6b85e860-b27a-46e6-a60f-a6c10eb8b7db",
+      "question_text": "Since when have you had this symptom?",
+      "option_ids": [
+        "ID_17856462-7643-4c9c-a879-0b2548761471"
+      ],
+      "option_texts": [
+        "Since when have you had this symptom?"
+      ],
+      "verdict": "ALLOW"
+    },
+    {
+      "t": 1,
+      "kind": "answered",
+      "source": "environment",
+      "question_id": "ID_6b85e860-b27a-46e6-a60f-a6c10eb8b7db",
+      "question_text": "Since when have you had this symptom?",
+      "option_ids": [],
+      "option_texts": [],
+      "free_text": "2 hours"
+    },
+    {
+      "t": 2,
+      "kind": "proposal",
+      "source": "agent",
+      "action": "ask_question",
+      "role": "intake",
+      "question_id": "ID_01f2916c-1675-495f-a49b-425cf8dae2c9",
+      "question_text": "How fast did this symptom develop?",
+      "option_ids": [
+        "ID_0cf109a7-5669-4afd-b5a5-05678f765ec9",
+        "ID_9a670465-8dbb-47ba-8919-687096341c1b"
+      ],
+      "option_texts": [
+        "Suddenly",
+        "Slowly"
+      ],
+      "verdict": "ALLOW"
+    },
+    {
+      "t": 3,
+      "kind": "answered",
+      "source": "environment",
+      "question_id": "ID_01f2916c-1675-495f-a49b-425cf8dae2c9",
+      "question_text": "How fast did this symptom develop?",
+      "option_ids": [
+        "ID_0cf109a7-5669-4afd-b5a5-05678f765ec9"
+      ],
+      "option_texts": [
+        "Suddenly"
+      ],
+      "free_text": null
+    },
+    {
+      "t": 4,
+      "kind": "proposal",
+      "source": "agent",
+      "action": "ask_question",
+      "role": "intake",
+      "question_id": "ID_d693c0a4-8021-4c2c-9b3c-fe2ca352cf6a",
+      "question_text": "Which part of the chest do you feel pain?",
+      "option_ids": [
+        "ID_b6ccd295-a061-4974-9d97-8983588424c7",
+        "ID_1c51bdc9-0069-46e9-9e7e-6bff95f8eacf",
+        "ID_96949bd1-cf34-4d25-9d65-d0c6bd60cf56",
+        "ID_eca8a1f2-e03c-459f-99a0-85bfd5547764"
+      ],
+      "option_texts": [
+        "Left side",
+        "Right side",
+        "Centre of chest",
+        "Epigastric"
+      ],
+      "verdict": "ALLOW"
+    },
+    {
+      "t": 5,
+      "kind": "answered",
+      "source": "environment",
+      "question_id": "ID_d693c0a4-8021-4c2c-9b3c-fe2ca352cf6a",
+      "question_text": "Which part of the chest do you feel pain?",
+      "option_ids": [
+        "ID_96949bd1-cf34-4d25-9d65-d0c6bd60cf56"
+      ],
+      "option_texts": [
+        "Centre of chest"
+      ],
+      "free_text": null
+    },
+    {
+      "t": 6,
+      "kind": "proposal",
+      "source": "agent",
+      "action": "ask_question",
+      "role": "intake",
+      "question_id": "ID_3c1f1576-9508-4c74-a35e-3f75acf9da60",
+      "question_text": "How can you describe the character of chest pain?",
+      "option_ids": [
+        "ID_380e97b1-a471-4698-8828-c8736d1bf069",
+        "ID_f79f97a1-ed40-4c37-b909-209e6df90ad7",
+        "ID_9ead6dc9-2c99-4689-a00f-7a609d6832f7",
+        "ID_0594bbe7-49a5-4928-8d13-c6345d97132c",
+        "ID_211cc900-3212-43e5-9ce1-d30fb33e05e8",
+        "ID_96e56349-94fc-4b5c-bb66-425bdc7b1615",
+        "ID_823f9492-17b1-48d4-b2c6-a45d2b6de378",
+        "ID_9fd466a6-3b02-476b-a632-13cec38747f5",
+        "ID_087a2391-6af9-445d-b00a-42cc8ada4798"
+      ],
+      "option_texts": [
+        "Constricting",
+        "Tearing",
+        "Crushing",
+        "Sharp",
+        "Dull aching",
+        "Burning",
+        "Heavy",
+        "Tight",
+        "Pleuritic"
+      ],
+      "verdict": "ALLOW"
+    },
+    {
+      "t": 7,
+      "kind": "answered",
+      "source": "environment",
+      "question_id": "ID_3c1f1576-9508-4c74-a35e-3f75acf9da60",
+      "question_text": "How can you describe the character of chest pain?",
+      "option_ids": [
+        "ID_9ead6dc9-2c99-4689-a00f-7a609d6832f7"
+      ],
+      "option_texts": [
+        "Crushing"
+      ],
+      "free_text": null
+    },
+    {
+      "t": 8,
+      "kind": "proposal",
+      "source": "agent",
+      "action": "ask_question",
+      "role": "intake",
+      "question_id": "ID_b021c353-3d82-4a5c-8917-ff38d6662a7b",
+      "question_text": "How severe is the pain?",
+      "option_ids": [
+        "ID_fb7f7085-cfca-44b5-9a45-b3a8273607c5",
+        "ID_dff596b9-7b27-41e3-af2a-16314b5a760a",
+        "ID_b2f321b9-27a1-43f1-a640-f0f4778812ea",
+        "ID_fabe45f8-6764-4d1e-8d0d-a40261db550c",
+        "ID_57a7f558-1937-4bdf-917d-504a9fa67195"
+      ],
+      "option_texts": [
+        "Mild pain (1 to less than  3)",
+        "Moderate pain (3 to less than  5)",
+        "Severe pain (5 to less than  7)",
+        "Very severe pain (7 to less than  9)",
+        "Worst pain possible (9 to 10)"
+      ],
+      "verdict": "ALLOW"
+    },
+    {
+      "t": 9,
+      "kind": "answered",
+      "source": "environment",
+      "question_id": "ID_b021c353-3d82-4a5c-8917-ff38d6662a7b",
+      "question_text": "How severe is the pain?",
+      "option_ids": [
+        "ID_fabe45f8-6764-4d1e-8d0d-a40261db550c"
+      ],
+      "option_texts": [
+        "Very severe pain (7 to less than  9)"
+      ],
+      "free_text": null
+    },
+    {
+      "t": 10,
+      "kind": "proposal",
+      "source": "agent",
+      "action": "ask_question",
+      "role": "intake",
+      "question_id": "ID_50cd4b8c-6e8d-4998-baaa-373c277e22b7",
+      "question_text": "Does the chest pain have any patterns during a 24 hr cycle?",
+      "option_ids": [
+        "ID_753b626a-c30b-4429-bb02-e8b3decda82e",
+        "ID_7e81cef9-a769-4af1-897b-ae7990e965bc"
+      ],
+      "option_texts": [
+        "Constant (Continuous)",
+        "Intermittent (comes & goes)"
+      ],
+      "verdict": "ALLOW"
+    },
+    {
+      "t": 11,
+      "kind": "answered",
+      "source": "environment",
+      "question_id": "ID_50cd4b8c-6e8d-4998-baaa-373c277e22b7",
+      "question_text": "Does the chest pain have any patterns during a 24 hr cycle?",
+      "option_ids": [
+        "ID_753b626a-c30b-4429-bb02-e8b3decda82e"
+      ],
+      "option_texts": [
+        "Constant (Continuous)"
+      ],
+      "free_text": null
+    },
+    {
+      "t": 12,
+      "kind": "proposal",
+      "source": "agent",
+      "action": "ask_question",
+      "role": "intake",
+      "question_id": "ID_c23fe3d8-ba59-40d0-b2fc-4013cd21a87d",
+      "question_text": "How long does the chest pain last?",
+      "option_ids": [
+        "ID_f824c753-a75a-4d31-9dbd-e6547bfafe46",
+        "ID_ae178fb0-ffd1-4137-a8d7-a67ee3274f1d",
+        "ID_e7e21222-516f-4bb7-be53-06f1ba010bbe"
+      ],
+      "option_texts": [
+        "A few seconds",
+        "A few minutes",
+        "A few hours"
+      ],
+      "verdict": "ALLOW"
+    },
+    {
+      "t": 13,
+      "kind": "answered",
+      "source": "environment",
+      "question_id": "ID_c23fe3d8-ba59-40d0-b2fc-4013cd21a87d",
+      "question_text": "How long does the chest pain last?",
+      "option_ids": [
+        "ID_e7e21222-516f-4bb7-be53-06f1ba010bbe"
+      ],
+      "option_texts": [
+        "A few hours"
+      ],
+      "free_text": null
+    },
+    {
+      "t": 14,
+      "kind": "proposal",
+      "source": "agent",
+      "action": "ask_question",
+      "role": "intake",
+      "question_id": "ID_a5beb441-0cc1-422b-9805-946de317e2dd",
+      "question_text": "What does relieve or lessen the chest pain?",
+      "option_ids": [
+        "ID_02fcb080-4efa-4608-8f19-985938576463",
+        "ID_ca75ad62-35b2-4e0b-8edd-d4cda224b5fc",
+        "ID_d2775086-5ec7-4af5-999c-3a014588bd0f",
+        "ID_817bfa4c-2514-49f3-847f-d4d755335253",
+        "ID_34a4a384-6c20-4f59-9482-5dc736c4faa7",
+        "ID_abdcfec2-112d-4668-9ad4-a8574aae3eee"
+      ],
+      "option_texts": [
+        "None",
+        "Rest",
+        "Sitting up",
+        "Leaning forward",
+        "Pressure",
+        "Medication"
+      ],
+      "verdict": "ALLOW"
+    },
+    {
+      "t": 15,
+      "kind": "answered",
+      "source": "environment",
+      "question_id": "ID_a5beb441-0cc1-422b-9805-946de317e2dd",
+      "question_text": "What does relieve or lessen the chest pain?",
+      "option_ids": [
+        "ID_02fcb080-4efa-4608-8f19-985938576463"
+      ],
+      "option_texts": [
+        "None"
+      ],
+      "free_text": null
+    },
+    {
+      "t": 16,
+      "kind": "proposal",
+      "source": "agent",
+      "action": "ask_question",
+      "role": "intake",
+      "question_id": "ID_7d090a35-4685-4063-9101-f5ca9dcdb11c",
+      "question_text": "What does increase or worsen the pain?",
+      "option_ids": [
+        "ID_d1f66d19-85c6-4939-bd70-0c32e4dfeb0e",
+        "ID_ccd281a7-cc17-4e00-8f08-89a288a70f92",
+        "ID_2aee2f3d-6787-488a-977e-abe4144dc0e6",
+        "ID_383a59a3-8a12-4098-b8b9-124eea1cd8bb",
+        "ID_ced87aad-6cb8-48c8-99c0-23dbb8338a19",
+        "ID_d54ed407-f2e6-414b-bd3a-68d11aad4643",
+        "ID_39d597b5-ee0d-4b5b-8aef-fdefadcad337",
+        "ID_be752347-0d0e-4b9d-915c-fd9279303290",
+        "ID_69190530-3dcd-4cc2-aa26-400d18e7de0d",
+        "ID_4fc5d549-740f-434b-83c8-56f9e0e66acc",
+        "ID_cc15473e-1761-4958-9d32-6b7b27ddc48d"
+      ],
+      "option_texts": [
+        "None",
+        "Arm movements",
+        "Pressing on chest",
+        "Exertion",
+        "Lying flat",
+        "Lying on sides",
+        "Coughing",
+        "Breathing",
+        "Food intake",
+        "Menstrual period",
+        "Other"
+      ],
+      "verdict": "ALLOW"
+    },
+    {
+      "t": 17,
+      "kind": "answered",
+      "source": "environment",
+      "question_id": "ID_7d090a35-4685-4063-9101-f5ca9dcdb11c",
+      "question_text": "What does increase or worsen the pain?",
+      "option_ids": [
+        "ID_383a59a3-8a12-4098-b8b9-124eea1cd8bb"
+      ],
+      "option_texts": [
+        "Exertion"
+      ],
+      "free_text": null
+    },
+    {
+      "t": 18,
+      "kind": "proposal",
+      "source": "agent",
+      "action": "ask_question",
+      "role": "intake",
+      "question_id": "ID_d203fe4b-4015-47cc-b999-c7cb0c6b9f7d",
+      "question_text": "How is chest pain progressing?",
+      "option_ids": [
+        "ID_7e612f07-cb15-4ea1-afdd-c714aacf64d8",
+        "ID_09955069-26c7-46fc-a461-a718016ec2d4",
+        "ID_da79e06a-2343-4e7c-abc5-b127de9bd0e4",
+        "ID_a52eb325-705a-4b25-81ca-b01680adcdc1"
+      ],
+      "option_texts": [
+        "Increasing",
+        "Decreasing",
+        "Recurrent (on & off)",
+        "No change"
+      ],
+      "verdict": "ALLOW"
+    },
+    {
+      "t": 19,
+      "kind": "answered",
+      "source": "environment",
+      "question_id": "ID_d203fe4b-4015-47cc-b999-c7cb0c6b9f7d",
+      "question_text": "How is chest pain progressing?",
+      "option_ids": [
+        "ID_7e612f07-cb15-4ea1-afdd-c714aacf64d8"
+      ],
+      "option_texts": [
+        "Increasing"
+      ],
+      "free_text": null
+    },
+    {
+      "t": 20,
+      "kind": "proposal",
+      "source": "agent",
+      "action": "ask_question",
+      "role": "intake",
+      "question_id": "ID_8acf327f-18e6-48db-aba5-f9052276ed0c",
+      "question_text": "Does the pain move to other parts of the body?",
+      "option_ids": [
+        "ID_253612f4-b3c6-41ec-826f-e76fc6b7cb19",
+        "ID_ab8419e3-3590-4916-8fa4-bfc101a63217"
+      ],
+      "option_texts": [
+        "No",
+        "Yes"
+      ],
+      "verdict": "ALLOW"
+    },
+    {
+      "t": 21,
+      "kind": "answered",
+      "source": "environment",
+      "question_id": "ID_8acf327f-18e6-48db-aba5-f9052276ed0c",
+      "question_text": "Does the pain move to other parts of the body?",
+      "option_ids": [
+        "ID_253612f4-b3c6-41ec-826f-e76fc6b7cb19"
+      ],
+      "option_texts": [
+        "No"
+      ],
+      "free_text": null
+    },
+    {
+      "t": 22,
+      "kind": "proposal",
+      "source": "agent",
+      "action": "ask_question",
+      "role": "intake",
+      "question_id": "ID_2a5f6982-0694-48b5-8faa-06241e5e2279",
+      "question_text": "Associated symptoms",
+      "option_ids": [
+        "ID_f55be4f7-196f-4afc-88fc-90127231e1ac",
+        "ID_51003f2b-659b-4098-9ea1-bd6a6824e7a4",
+        "ID_f11aa381-71db-4773-940a-2b44b7b0c5e9",
+        "ID_eaec0dcb-7ad7-4fb5-b3b9-210aa51042ea",
+        "ID_15ec220d-bfdd-4a85-9d02-27a796d2def9",
+        "ID_bfce918f-141b-44c9-aaca-34b3c8fbcad3",
+        "ID_4f829c97-5b7e-4538-9951-0b103b7ab607",
+        "ID_a91931a4-5a21-492f-9101-ba8b463a0f9c"
+      ],
+      "option_texts": [
+        "Cough",
+        "Coughing up blood",
+        "Difficulty breathing",
+        "Palpitations",
+        "Heartburn",
+        "Difficulty swallowing",
+        "Regurgitation of food",
+        "History of injury to chest wall"
+      ],
+      "verdict": "ALLOW"
+    },
+    {
+      "t": 23,
+      "kind": "answered",
+      "source": "environment",
+      "question_id": "ID_2a5f6982-0694-48b5-8faa-06241e5e2279",
+      "question_text": "Associated symptoms",
+      "option_ids": [
+        "ID_f11aa381-71db-4773-940a-2b44b7b0c5e9"
+      ],
+      "option_texts": [
+        "Difficulty breathing"
+      ],
+      "free_text": null
+    },
+    {
+      "t": 24,
+      "kind": "proposal",
+      "source": "agent",
+      "action": "ask_question",
+      "role": "intake",
+      "question_id": "ID_f4f25bdb-2a37-417e-9387-78645ed31fbf",
+      "question_text": "Do you have any other symptoms?",
+      "option_ids": [
+        "ID_e27aa693-f730-4308-912a-58edaae5f822",
+        "ID_9b7263e5-54db-4874-a5ed-56e0c3450dd7",
+        "ID_1df1ca82-82f2-4e13-9a54-3b06144b9d86",
+        "ID_4d99a378-dd13-4f38-bc03-91d9801f49fc",
+        "ID_cbfd9f28-e1b7-4fbf-b70c-cefac40d5214",
+        "ID_85d07260-ab02-495a-9b5d-c4a81c1ab528",
+        "ID_63bfc1ab-08e2-430a-8641-3b9965866746",
+        "ID_eb2cd4bb-d56a-4cb4-aa06-e76ef12b7cb1",
+        "ID_e90dcb3a-45f6-486d-90ca-49c48b24442f",
+        "ID_9ccc2f2e-e17f-4556-890c-938830828a1a",
+        "ID_798d4a21-618e-4a70-96e9-732e86a3298b",
+        "ID_7e00ff7f-27c4-458b-b953-2cc9dcdef191"
+      ],
+      "option_texts": [
+        "None",
+        "Fever",
+        "Chills & rigors",
+        "Nausea",
+        "Vomiting",
+        "Excessive sweating",
+        "Dizziness",
+        "Fainting",
+        "Fatigue",
+        "Loss of appetite",
+        "Weight loss",
+        "Other"
+      ],
+      "verdict": "ALLOW"
+    },
+    {
+      "t": 25,
+      "kind": "answered",
+      "source": "environment",
+      "question_id": "ID_f4f25bdb-2a37-417e-9387-78645ed31fbf",
+      "question_text": "Do you have any other symptoms?",
+      "option_ids": [
+        "ID_e27aa693-f730-4308-912a-58edaae5f822"
+      ],
+      "option_texts": [
+        "None"
+      ],
+      "free_text": null
+    },
+    {
+      "t": 26,
+      "kind": "proposal",
+      "source": "agent",
+      "action": "ask_question",
+      "role": "intake",
+      "question_id": "ID_20412fe8-64a9-4a42-bfee-d868b2273262",
+      "question_text": "Have you taken any treatment (including self-medication or home remedies) or seen any health provider for this problem?",
+      "option_ids": [
+        "ID_f9f4a188-9c0d-4ece-ad75-9c9a38760747",
+        "ID_c085a1e1-580d-4227-a928-b2a271e5b01e"
+      ],
+      "option_texts": [
+        "No",
+        "Yes"
+      ],
+      "verdict": "ALLOW"
+    },
+    {
+      "t": 27,
+      "kind": "answered",
+      "source": "environment",
+      "question_id": "ID_20412fe8-64a9-4a42-bfee-d868b2273262",
+      "question_text": "Have you taken any treatment (including self-medication or home remedies) or seen any health provider for this problem?",
+      "option_ids": [
+        "ID_f9f4a188-9c0d-4ece-ad75-9c9a38760747"
+      ],
+      "option_texts": [
+        "No"
+      ],
+      "free_text": null
+    },
+    {
+      "t": 28,
+      "kind": "proposal",
+      "source": "agent",
+      "action": "ask_question",
+      "role": "intake",
+      "question_id": "ID_3c11df65-58f2-4319-ba52-bddc2f0acb39",
+      "question_text": "Describe",
+      "option_ids": [
+        "ID_87f25e74-7d2d-4251-ade6-20de7ba262bd"
+      ],
+      "option_texts": [
+        "Describe"
+      ],
+      "verdict": "ALLOW"
+    },
+    {
+      "t": 29,
+      "kind": "answered",
+      "source": "environment",
+      "question_id": "ID_3c11df65-58f2-4319-ba52-bddc2f0acb39",
+      "question_text": "Describe",
+      "option_ids": [],
+      "option_texts": [],
+      "free_text": "No treatment taken."
+    },
+    {
+      "t": 30,
+      "kind": "proposal",
+      "source": "agent",
+      "action": "ask_question",
+      "role": "intake",
+      "question_id": "ID_46dcaefb-657b-421c-a711-b839f28dfa8c",
+      "question_text": "Additional Information",
+      "option_ids": [
+        "ID_4d715c71-993e-4b06-b5c0-02a3b17a46fb"
+      ],
+      "option_texts": [
+        "[Enter additional information]"
+      ],
+      "verdict": "ALLOW"
+    },
+    {
+      "t": 31,
+      "kind": "answered",
+      "source": "environment",
+      "question_id": "ID_46dcaefb-657b-421c-a711-b839f28dfa8c",
+      "question_text": "Additional Information",
+      "option_ids": [],
+      "option_texts": [],
+      "free_text": "No additional information."
+    },
+    {
+      "t": 32,
+      "kind": "proposal",
+      "source": "agent",
+      "action": "close_and_act",
+      "role": "intake",
+      "disposition": "urgent",
+      "verdict": "ALLOW"
+    }
+  ],
+  "grade": {
+    "verdict": "ALLOW",
+    "reward": 1.0,
+    "criteria": {
+      "schema_valid": 1.0,
+      "legal_id": 1.0,
+      "age_ok": 1.0,
+      "nesting_ok": 1.0,
+      "completeness_ok": 1.0,
+      "safety_ok": 1.0
+    },
+    "reasons": []
+  }
+}

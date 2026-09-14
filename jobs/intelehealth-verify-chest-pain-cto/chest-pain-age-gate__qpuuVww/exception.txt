@@ -1,0 +1,25 @@
+Traceback (most recent call last):
+  File "/home/skale/.local/share/uv/tools/harbor/lib/python3.12/site-packages/harbor/trial/trial.py", line 409, in run
+    await self._run()
+  File "/home/skale/.local/share/uv/tools/harbor/lib/python3.12/site-packages/harbor/trial/single_step.py", line 52, in _run
+    await self._run_verifier()
+  File "/home/skale/.local/share/uv/tools/harbor/lib/python3.12/site-packages/harbor/trial/single_step.py", line 99, in _run_verifier
+    self.result.verifier_result = await self._run_separate_verifier(
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/skale/.local/share/uv/tools/harbor/lib/python3.12/site-packages/harbor/trial/trial.py", line 695, in _run_separate_verifier
+    async with self._separate_verifier_env(
+  File "/usr/lib/python3.12/contextlib.py", line 210, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/skale/.local/share/uv/tools/harbor/lib/python3.12/site-packages/harbor/trial/trial.py", line 768, in _separate_verifier_env
+    mounts=self._verifier_env_mounts(env_config),
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/skale/.local/share/uv/tools/harbor/lib/python3.12/site-packages/harbor/trial/trial.py", line 794, in _verifier_env_mounts
+    source=self.paths.verifier_dir.resolve().absolute().as_posix(),
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/pathlib.py", line 1242, in resolve
+    s = self._flavour.realpath(self, strict=strict)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen posixpath>", line 433, in realpath
+  File "<frozen posixpath>", line 420, in abspath
+FileNotFoundError: [Errno 2] No such file or directory
