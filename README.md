@@ -38,6 +38,7 @@ Harbor oracle (already run; 3/3 reward 1.0, zero errors):
 
 - `jobs/intelehealth-verify-oracle-3task/result.json`
 - Intake trace: `jobs/intelehealth-verify-oracle-3task/chest-pain-intake__GPbttqE/verifier/encounter.json`
+- See Harbor public job upload: https://hub.harborframework.com/jobs/c5932f67-5021-472e-9685-22d3c2232a45/trials/527e59f4-3843-405c-9175-3ef0f1845902?tab=verifier
 
 Upload the already-run QC job (3/3, reward 1.0). Do this from this folder:
 
