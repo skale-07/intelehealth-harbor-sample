@@ -17,8 +17,11 @@ from grade import (  # noqa: E402
     run_rollout,
     write_outputs,
 )
+from greedy_agent import propose as greedy_propose  # noqa: E402
 from protocol_walker import load_protocol  # noqa: E402
 from sync_task_assets import TASKS, protocol_src_for, sync  # noqa: E402
+from v2_fixtures import DEMO_RULES as V2_DEMO_RULES  # noqa: E402
+from v2_fixtures import iter_cases as iter_v2_cases  # noqa: E402
 
 AGE_GATE = TASKS[0]
 UNDERTRIAGE = TASKS[1]
@@ -166,9 +169,11 @@ def main() -> int:
             "nesting_ok",
             "completeness_ok",
             "safety_ok",
+            "options_complete",
             "reward",
         ):
             assert key in reward, key
+        assert reward["options_complete"] == 1.0
 
     assert compute_reward({k: 1.0 for k in age_pass["criteria"]}) == 1.0
     mixed = dict(age_pass["criteria"])
@@ -216,15 +221,43 @@ def main() -> int:
     unanswered = _grade(AGE_GATE, ORACLE_AGE_GATE)
     assert unanswered["criteria"]["duplicate_free"] == 1.0, unanswered
     assert unanswered["reward"] == 1.0, unanswered
+    assert unanswered["criteria"]["options_complete"] == 1.0, unanswered
 
-    def repeat_duration(_state: dict, proto: object) -> dict:
-        return {
-            "schema_version": "0.1.0",
-            "protocol_id": proto.name,  # type: ignore[attr-defined]
-            "action": "ask_question",
-            "question_id": Q_DURATION,
-            "option_ids": [],
-        }
+    incomplete_how_fast = {
+        "schema_version": "0.1.0",
+        "protocol_id": "Chest pain",
+        "action": "ask_question",
+        "question_id": Q_HOW_FAST,
+        "option_ids": [O_SUDDENLY],
+    }
+    incomplete = _grade(AGE_GATE, incomplete_how_fast)
+    assert incomplete["criteria"]["options_complete"] == 0.0, incomplete
+    assert incomplete["criteria"]["age_ok"] == 1.0, incomplete
+    assert incomplete["reward"] == 0.0, incomplete
+    assert incomplete["verdict"] == "BLOCK", incomplete
+
+    protocol_src = protocol_src_for(AGE_GATE)
+    v2_protocol = load_protocol(protocol_src)
+    for case in iter_v2_cases():
+        if case["task_kind"] == "rollout_intake":
+            def _oracle(state: dict, proto: object, disposition: str = case["close_disposition"]) -> dict:
+                proposal = greedy_propose(state, proto)
+                if proposal.get("action") == "close_and_act":
+                    proposal = dict(proposal)
+                    proposal["disposition"] = disposition
+                return proposal
+
+            result, _, _, _ = run_rollout(
+                _oracle,
+                case["patient_state"],
+                v2_protocol,
+                V2_DEMO_RULES,
+                case["patient_script"],
+            )
+        else:
+            result = evaluate(case["oracle"], case["patient_state"], v2_protocol, V2_DEMO_RULES)
+        assert result["reward"] == 1.0, (case["case_id"], result)
+        assert result["criteria"]["options_complete"] == 1.0, (case["case_id"], result)
 
     intake = TASKS[2]
     start = _load(intake / "tests" / "case" / "patient_state.json")
@@ -232,6 +265,21 @@ def main() -> int:
     script = _load(intake / "tests" / "case" / "patient_script.json")
     intake_protocol = load_protocol(intake / "tests" / "case" / "protocol.json")
     intake_rules = _load(intake / "tests" / "demo_rules.json")
+    duration_option_ids = [
+        o.id
+        for o in intake_protocol.options_for(Q_DURATION)
+        if intake_protocol.is_age_eligible(o, int(start["age"]))
+    ]
+
+    def repeat_duration(_state: dict, proto: object) -> dict:
+        return {
+            "schema_version": "0.1.0",
+            "protocol_id": proto.name,  # type: ignore[attr-defined]
+            "action": "ask_question",
+            "question_id": Q_DURATION,
+            "option_ids": duration_option_ids,
+        }
+
     dup_rollout, final_patient, dup_steps, _ = run_rollout(
         repeat_duration, start, intake_protocol, intake_rules, script
     )

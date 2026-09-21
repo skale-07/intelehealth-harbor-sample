@@ -1,0 +1,28 @@
+# V3 Chest pain tasks. V2 is frozen; do not point this job at v2.
+# Run from this folder (copy onto the Linux filesystem first):
+#   harbor run -c job-v3.yaml -a oracle -y -q
+#
+# Bake-off (documented command, not a new agent):
+#   harbor run -c job-v3.yaml -a terminus-2 -m openai/gpt-4o -n 3 -y -q
+#
+# Local QC (no Docker):
+#   python shared/build_v3_tasks.py
+#   python shared/check_v3_fixtures.py
+#   python shared/check_v3_shortcuts.py
+
+job_name: intelehealth-verify-v3-oracle
+jobs_dir: jobs
+n_attempts: 1
+n_concurrent_trials: 1
+debug: false
+
+agents:
+  - name: oracle
+
+datasets:
+  - path: datasets/intelehealth-verify-v3
+
+environment:
+  type: docker
+  force_build: false
+  delete: true

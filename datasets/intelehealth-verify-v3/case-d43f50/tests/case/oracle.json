@@ -1,0 +1,17 @@
+{
+  "action": "ask_question",
+  "option_ids": [
+    "ID_cde9e257-f3f9-43f3-89ac-128783747ceb",
+    "ID_8991a4a5-2dce-473d-b951-0621d3840839",
+    "ID_1d695160-34dd-456d-baae-6c69119db808",
+    "ID_aa89d450-b747-4998-b470-2a9e7b0009c6",
+    "ID_6dd5ebfd-5234-45c1-9e10-a1d93f9a4984",
+    "ID_6b299476-f87e-4798-b985-9e62a8f7de9e",
+    "ID_d2faa05c-d9c0-47f9-916f-36d23658c127",
+    "ID_aa248fd1-ad8f-4454-9135-5e214540017a",
+    "ID_ea05b257-a80e-4427-a6e6-829d50c40582"
+  ],
+  "protocol_id": "Chest pain",
+  "question_id": "ID_e9a1aaab-f1e9-4dbd-8c58-3c7e77995b3e",
+  "schema_version": "0.1.0"
+}

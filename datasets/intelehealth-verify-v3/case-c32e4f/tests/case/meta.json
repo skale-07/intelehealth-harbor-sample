@@ -1,0 +1,9 @@
+{
+  "case_id": "case-c32e4f",
+  "pair_id": "pair-nest-01",
+  "policy_id": "demo-chest-pain-disposition-v3",
+  "report_slice": "both",
+  "suite": "nested_branch",
+  "task_kind": "one_shot_next",
+  "variant": "inactive"
+}

@@ -1,0 +1,10 @@
+{"verdict": "BLOCK", "reward": 0.0, "reasons": ["ID_7e00ff7f-27c4-458b-b953-2cc9dcdef191 exists but is not a question node."]}
+....F                                                                    [100%]
+=================================== FAILURES ===================================
+___________________ test_oracle_or_passing_agent_scores_one ____________________
+/tests/test_proposal.py:53: in test_oracle_or_passing_agent_scores_one
+    assert payload["reward"] == 1.0
+E   assert 0.0 == 1.0
+=========================== short test summary info ============================
+FAILED ../tests/test_proposal.py::test_oracle_or_passing_agent_scores_one - a...
+1 failed, 4 passed in 0.05s

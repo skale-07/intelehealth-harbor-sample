@@ -21,7 +21,7 @@ from typing import Any, Callable
 from encounter import answered_turn, build_encounter, build_rollout_encounter, _proposal_turn
 from protocol_walker import Protocol, load_protocol
 
-VERIFIER_VERSION = "0.2.0"
+VERIFIER_VERSION = "0.3.0"
 ACTION_ASK = "ask_question"
 ACTION_CLOSE = "close_and_act"
 ALLOWED_DISPOSITIONS = {"local_management", "refer", "urgent"}
@@ -43,6 +43,7 @@ CRITERIA_KEYS = (
     "safety_ok",
     "disposition_ok",
     "duplicate_free",
+    "options_complete",
 )
 
 
@@ -70,6 +71,10 @@ def _selected_option_ids(patient: dict[str, Any]) -> set[str]:
 
 def _answered_question_ids(patient: dict[str, Any]) -> set[str]:
     return {a["question_id"] for a in (patient.get("answers") or []) if a.get("question_id")}
+
+
+def age_eligible_option_ids(protocol: Protocol, question_id: str, age: int) -> list[str]:
+    return [o.id for o in protocol.options_for(question_id) if protocol.is_age_eligible(o, age)]
 
 
 def expected_disposition(patient: dict[str, Any], demo_rules: dict[str, Any]) -> str:
@@ -250,6 +255,23 @@ def evaluate(
                 )
 
         if node is not None and node.is_question:
+            eligible = set(age_eligible_option_ids(protocol, qid, age))
+            missing_eligible = eligible - set(option_ids)
+            if missing_eligible:
+                fail(
+                    "options_complete",
+                    BLOCK,
+                    (
+                        f"option_ids omit {len(missing_eligible)} age-eligible option(s) of "
+                        f"\"{node.text}\" ({qid})."
+                    ),
+                    _evidence(
+                        protocol,
+                        qid,
+                        "Ask must list every age-eligible option of the question.",
+                        extra={"missing_option_ids": sorted(missing_eligible)},
+                    ),
+                )
             gate = protocol.activating_option(qid)
             if gate is not None and not protocol.is_branch_active(qid, selected):
                 fail(

@@ -1,0 +1,52 @@
+{
+  "criteria": {
+    "age_ok": 1.0,
+    "completeness_ok": 1.0,
+    "disposition_ok": 1.0,
+    "duplicate_free": 1.0,
+    "legal_id": 0.0,
+    "nesting_ok": 1.0,
+    "options_complete": 1.0,
+    "safety_ok": 1.0,
+    "schema_valid": 1.0
+  },
+  "disposition_policy": {
+    "note": "Disposition mapping is synthetic demo policy, not encoded in the protocol.",
+    "source": "DEMO_POLICY",
+    "validated_clinically": false
+  },
+  "engine_version": "3.0",
+  "evidence": [
+    {
+      "field": "id",
+      "note": "No node with this ID exists in the protocol.",
+      "path": "ID_12345678-9abc-def0-1234-56789abcdef0",
+      "source": "protocol.json",
+      "validated_clinically": false,
+      "value": null
+    }
+  ],
+  "failed_criteria": [
+    "legal_id"
+  ],
+  "ground_truth_version": "protocol.json",
+  "protocol_id": "ID_c492cec3-f0e8-4ab1-8b31-fd2f3b557e0b",
+  "protocol_name": "Chest pain",
+  "reasons": [
+    "question_id ID_12345678-9abc-def0-1234-56789abcdef0 does not exist in protocol.json."
+  ],
+  "reward": 0.0,
+  "rules_checked": [
+    "schema_valid",
+    "legal_id",
+    "age_ok",
+    "nesting_ok",
+    "completeness_ok",
+    "safety_ok",
+    "disposition_ok",
+    "duplicate_free",
+    "options_complete"
+  ],
+  "verdict": "BLOCK",
+  "verifier_version": "0.3.0"
+}

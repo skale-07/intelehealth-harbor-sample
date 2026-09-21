@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "IntelehealthHarborProposal",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["schema_version", "protocol_id", "action"],
+  "properties": {
+    "schema_version": { "type": "string", "const": "0.1.0" },
+    "protocol_id": { "type": "string" },
+    "action": { "type": "string", "enum": ["ask_question", "close_and_act"] },
+    "question_id": { "type": "string" },
+    "option_ids": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "disposition": {
+      "type": "string",
+      "enum": ["local_management", "refer", "urgent"]
+    }
+  }
+}

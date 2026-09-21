@@ -1,0 +1,6 @@
+{
+  "action": "close_and_act",
+  "disposition": "local_management",
+  "protocol_id": "Chest pain",
+  "schema_version": "0.1.0"
+}

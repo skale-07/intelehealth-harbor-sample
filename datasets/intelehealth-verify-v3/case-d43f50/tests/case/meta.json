@@ -1,0 +1,9 @@
+{
+  "case_id": "case-d43f50",
+  "pair_id": "pair-nest-01",
+  "policy_id": null,
+  "report_slice": "grammar",
+  "suite": "nested_branch",
+  "task_kind": "one_shot_next",
+  "variant": "active"
+}

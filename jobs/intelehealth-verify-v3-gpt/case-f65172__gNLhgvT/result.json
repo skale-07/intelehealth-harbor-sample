@@ -1,0 +1,141 @@
+{
+    "id": "434d7b33-26a2-4d5d-83bd-b207ecef2dbb",
+    "task_name": "intelehealth-verify-v3/case-f65172",
+    "trial_name": "case-f65172__gNLhgvT",
+    "trial_uri": "file:///mnt/c/Users/skale/OneDrive/Desktop/AkharaAI-Demo/intelehealth-harbor-sample/jobs/intelehealth-verify-v3-gpt/case-f65172__gNLhgvT",
+    "task_id": {
+        "path": "datasets/intelehealth-verify-v3/case-f65172"
+    },
+    "source": "intelehealth-verify-v3",
+    "task_checksum": "ce35a676e53a10b96cff4899d777f7af4f13f44a2886965428041297417f0f30",
+    "config": {
+        "task": {
+            "path": "datasets/intelehealth-verify-v3/case-f65172",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "intelehealth-verify-v3"
+        },
+        "trial_name": "case-f65172__gNLhgvT",
+        "trials_dir": "jobs/intelehealth-verify-v3-gpt",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": "terminus-2",
+            "import_path": null,
+            "model_name": "gpt-4o",
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {},
+            "env": {
+                "OPENAI_API_KEY": "${OPENAI_API_KEY}"
+            },
+            "mcp_servers": []
+        },
+        "user_agent": null,
+        "environment": {
+            "type": "docker",
+            "import_path": null,
+            "force_build": false,
+            "delete": true,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "kwargs": {},
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "extra_instructions": [],
+        "job_id": "87283bb5-d0c1-45cb-ae69-3f8c027f9c21",
+        "source_trial": null
+    },
+    "agent_info": {
+        "name": "terminus-2",
+        "version": "2.0.0",
+        "model_info": {
+            "name": "gpt-4o",
+            "provider": null
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": 28730,
+        "n_cache_tokens": 22656,
+        "n_output_tokens": 965,
+        "cost_usd": 0.05315500000000001,
+        "rollout_details": [],
+        "metadata": {
+            "n_episodes": 7,
+            "api_request_times_msec": [
+                2137.387275695801,
+                3410.693883895874,
+                1867.7453994750977,
+                1664.6859645843506,
+                1269.3109512329102,
+                3077.2931575775146,
+                1972.8777408599854
+            ],
+            "summarization_count": 0
+        }
+    },
+    "verifier_result": {
+        "rewards": {
+            "age_ok": 1.0,
+            "completeness_ok": 1.0,
+            "disposition_ok": 0.0,
+            "duplicate_free": 1.0,
+            "legal_id": 1.0,
+            "nesting_ok": 1.0,
+            "options_complete": 1.0,
+            "reward": 0.0,
+            "safety_ok": 1.0,
+            "schema_valid": 1.0
+        }
+    },
+    "verifier_environment_mode": "separate",
+    "exception_info": null,
+    "started_at": "2026-09-21T04:59:24.398423Z",
+    "finished_at": "2026-09-21T05:01:45.733102Z",
+    "environment_setup": {
+        "started_at": "2026-09-21T04:59:24.562664Z",
+        "finished_at": "2026-09-21T04:59:33.934305Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-09-21T04:59:33.934330Z",
+        "finished_at": "2026-09-21T04:59:59.404631Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-09-21T04:59:59.404691Z",
+        "finished_at": "2026-09-21T05:00:36.314065Z"
+    },
+    "verifier": {
+        "started_at": "2026-09-21T05:00:58.759101Z",
+        "finished_at": "2026-09-21T05:01:45.732883Z"
+    },
+    "step_results": null
+}

@@ -1,0 +1,16 @@
+{
+    "task": {
+        "path": "datasets/intelehealth-verify-v3/case-d43f50",
+        "source": "intelehealth-verify-v3"
+    },
+    "trial_name": "case-d43f50__CmiQCUp",
+    "trials_dir": "jobs/intelehealth-verify-v3-gpt",
+    "agent": {
+        "name": "terminus-2",
+        "model_name": "gpt-4o",
+        "env": {
+            "OPENAI_API_KEY": "${OPENAI_API_KEY}"
+        }
+    },
+    "job_id": "87283bb5-d0c1-45cb-ae69-3f8c027f9c21"
+}

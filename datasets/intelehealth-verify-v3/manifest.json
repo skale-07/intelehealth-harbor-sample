@@ -1,0 +1,196 @@
+{
+  "cases": [
+    {
+      "case_id": "case-a10c2d",
+      "close_disposition": null,
+      "oracle": {
+        "action": "ask_question",
+        "option_ids": [
+          "ID_d1f66d19-85c6-4939-bd70-0c32e4dfeb0e",
+          "ID_ccd281a7-cc17-4e00-8f08-89a288a70f92",
+          "ID_2aee2f3d-6787-488a-977e-abe4144dc0e6",
+          "ID_383a59a3-8a12-4098-b8b9-124eea1cd8bb",
+          "ID_ced87aad-6cb8-48c8-99c0-23dbb8338a19",
+          "ID_d54ed407-f2e6-414b-bd3a-68d11aad4643",
+          "ID_39d597b5-ee0d-4b5b-8aef-fdefadcad337",
+          "ID_be752347-0d0e-4b9d-915c-fd9279303290",
+          "ID_69190530-3dcd-4cc2-aa26-400d18e7de0d",
+          "ID_cc15473e-1761-4958-9d32-6b7b27ddc48d"
+        ],
+        "protocol_id": "Chest pain",
+        "question_id": "ID_7d090a35-4685-4063-9101-f5ca9dcdb11c",
+        "schema_version": "0.1.0"
+      },
+      "pair_id": "pair-age-01",
+      "policy_id": null,
+      "report_slice": "grammar",
+      "suite": "age_eligibility",
+      "task_kind": "one_shot_question",
+      "variant": "ineligible"
+    },
+    {
+      "case_id": "case-b21d3e",
+      "close_disposition": null,
+      "oracle": {
+        "action": "ask_question",
+        "option_ids": [
+          "ID_d1f66d19-85c6-4939-bd70-0c32e4dfeb0e",
+          "ID_ccd281a7-cc17-4e00-8f08-89a288a70f92",
+          "ID_2aee2f3d-6787-488a-977e-abe4144dc0e6",
+          "ID_383a59a3-8a12-4098-b8b9-124eea1cd8bb",
+          "ID_ced87aad-6cb8-48c8-99c0-23dbb8338a19",
+          "ID_d54ed407-f2e6-414b-bd3a-68d11aad4643",
+          "ID_39d597b5-ee0d-4b5b-8aef-fdefadcad337",
+          "ID_be752347-0d0e-4b9d-915c-fd9279303290",
+          "ID_69190530-3dcd-4cc2-aa26-400d18e7de0d",
+          "ID_4fc5d549-740f-434b-83c8-56f9e0e66acc",
+          "ID_cc15473e-1761-4958-9d32-6b7b27ddc48d"
+        ],
+        "protocol_id": "Chest pain",
+        "question_id": "ID_7d090a35-4685-4063-9101-f5ca9dcdb11c",
+        "schema_version": "0.1.0"
+      },
+      "pair_id": "pair-age-01",
+      "policy_id": null,
+      "report_slice": "grammar",
+      "suite": "age_eligibility",
+      "task_kind": "one_shot_question",
+      "variant": "eligible"
+    },
+    {
+      "case_id": "case-c32e4f",
+      "close_disposition": "local_management",
+      "oracle": {
+        "action": "close_and_act",
+        "disposition": "local_management",
+        "protocol_id": "Chest pain",
+        "schema_version": "0.1.0"
+      },
+      "pair_id": "pair-nest-01",
+      "policy_id": "demo-chest-pain-disposition-v3",
+      "report_slice": "both",
+      "suite": "nested_branch",
+      "task_kind": "one_shot_next",
+      "variant": "inactive"
+    },
+    {
+      "case_id": "case-d43f50",
+      "close_disposition": null,
+      "oracle": {
+        "action": "ask_question",
+        "option_ids": [
+          "ID_cde9e257-f3f9-43f3-89ac-128783747ceb",
+          "ID_8991a4a5-2dce-473d-b951-0621d3840839",
+          "ID_1d695160-34dd-456d-baae-6c69119db808",
+          "ID_aa89d450-b747-4998-b470-2a9e7b0009c6",
+          "ID_6dd5ebfd-5234-45c1-9e10-a1d93f9a4984",
+          "ID_6b299476-f87e-4798-b985-9e62a8f7de9e",
+          "ID_d2faa05c-d9c0-47f9-916f-36d23658c127",
+          "ID_aa248fd1-ad8f-4454-9135-5e214540017a",
+          "ID_ea05b257-a80e-4427-a6e6-829d50c40582"
+        ],
+        "protocol_id": "Chest pain",
+        "question_id": "ID_e9a1aaab-f1e9-4dbd-8c58-3c7e77995b3e",
+        "schema_version": "0.1.0"
+      },
+      "pair_id": "pair-nest-01",
+      "policy_id": null,
+      "report_slice": "grammar",
+      "suite": "nested_branch",
+      "task_kind": "one_shot_next",
+      "variant": "active"
+    },
+    {
+      "case_id": "case-e54061",
+      "close_disposition": "urgent",
+      "oracle": {
+        "action": "close_and_act",
+        "disposition": "urgent",
+        "protocol_id": "Chest pain",
+        "schema_version": "0.1.0"
+      },
+      "pair_id": "pair-disp-01",
+      "policy_id": "demo-chest-pain-disposition-v3",
+      "report_slice": "disposition",
+      "suite": "disposition",
+      "task_kind": "one_shot_close",
+      "variant": "escalate"
+    },
+    {
+      "case_id": "case-f65172",
+      "close_disposition": "local_management",
+      "oracle": {
+        "action": "close_and_act",
+        "disposition": "local_management",
+        "protocol_id": "Chest pain",
+        "schema_version": "0.1.0"
+      },
+      "pair_id": "pair-disp-01",
+      "policy_id": "demo-chest-pain-disposition-v3",
+      "report_slice": "disposition",
+      "suite": "disposition",
+      "task_kind": "one_shot_close",
+      "variant": "default"
+    },
+    {
+      "case_id": "case-061283",
+      "close_disposition": "local_management",
+      "oracle": {
+        "action": "close_and_act",
+        "disposition": "local_management",
+        "protocol_id": "Chest pain",
+        "schema_version": "0.1.0"
+      },
+      "pair_id": "pair-inv-01",
+      "policy_id": "demo-chest-pain-disposition-v3",
+      "report_slice": "disposition",
+      "suite": "invariance",
+      "task_kind": "one_shot_close",
+      "variant": "alpha"
+    },
+    {
+      "case_id": "case-172394",
+      "close_disposition": "local_management",
+      "oracle": {
+        "action": "close_and_act",
+        "disposition": "local_management",
+        "protocol_id": "Chest pain",
+        "schema_version": "0.1.0"
+      },
+      "pair_id": "pair-inv-01",
+      "policy_id": "demo-chest-pain-disposition-v3",
+      "report_slice": "disposition",
+      "suite": "invariance",
+      "task_kind": "one_shot_close",
+      "variant": "beta"
+    },
+    {
+      "case_id": "case-2834a5",
+      "close_disposition": "urgent",
+      "oracle": null,
+      "pair_id": "pair-roll-01",
+      "policy_id": "demo-chest-pain-disposition-v3",
+      "report_slice": "disposition",
+      "suite": "rollout",
+      "task_kind": "rollout_intake",
+      "variant": "escalate"
+    },
+    {
+      "case_id": "case-3945b6",
+      "close_disposition": "local_management",
+      "oracle": null,
+      "pair_id": "pair-roll-01",
+      "policy_id": "demo-chest-pain-disposition-v3",
+      "report_slice": "disposition",
+      "suite": "rollout",
+      "task_kind": "rollout_intake",
+      "variant": "default"
+    }
+  ],
+  "dataset": "intelehealth-verify-v3",
+  "generated_by": "shared/build_v3_tasks.py",
+  "note": "Verifier-side fixture index. Grammar slices (age, nested ask) are protocol structure. Disposition slices use synthetic DEMO_POLICY: selected escalate_option_ids \u2192 urgent, else local_management. Not a clinical rule. Do not rank models on a blended mean of both slices.",
+  "policy_id": "demo-chest-pain-disposition-v3",
+  "protocol_file": "Chest pain.json",
+  "validated_clinically": false
+}

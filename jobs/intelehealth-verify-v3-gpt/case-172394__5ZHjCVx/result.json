@@ -1,0 +1,138 @@
+{
+    "id": "6620ec7f-8ea9-4a08-a0e9-2df4fdde3ca4",
+    "task_name": "intelehealth-verify-v3/case-172394",
+    "trial_name": "case-172394__5ZHjCVx",
+    "trial_uri": "file:///mnt/c/Users/skale/OneDrive/Desktop/AkharaAI-Demo/intelehealth-harbor-sample/jobs/intelehealth-verify-v3-gpt/case-172394__5ZHjCVx",
+    "task_id": {
+        "path": "datasets/intelehealth-verify-v3/case-172394"
+    },
+    "source": "intelehealth-verify-v3",
+    "task_checksum": "fdd9b3c35416aa30dd0243700ba5e6a7cee32ffc4839e3a4a0dcd9b85e4ac100",
+    "config": {
+        "task": {
+            "path": "datasets/intelehealth-verify-v3/case-172394",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "intelehealth-verify-v3"
+        },
+        "trial_name": "case-172394__5ZHjCVx",
+        "trials_dir": "jobs/intelehealth-verify-v3-gpt",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": "terminus-2",
+            "import_path": null,
+            "model_name": "gpt-4o",
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {},
+            "env": {
+                "OPENAI_API_KEY": "${OPENAI_API_KEY}"
+            },
+            "mcp_servers": []
+        },
+        "user_agent": null,
+        "environment": {
+            "type": "docker",
+            "import_path": null,
+            "force_build": false,
+            "delete": true,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "kwargs": {},
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "extra_instructions": [],
+        "job_id": "87283bb5-d0c1-45cb-ae69-3f8c027f9c21",
+        "source_trial": null
+    },
+    "agent_info": {
+        "name": "terminus-2",
+        "version": "2.0.0",
+        "model_info": {
+            "name": "gpt-4o",
+            "provider": null
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": 13974,
+        "n_cache_tokens": 8576,
+        "n_output_tokens": 600,
+        "cost_usd": 0.030215000000000006,
+        "rollout_details": [],
+        "metadata": {
+            "n_episodes": 4,
+            "api_request_times_msec": [
+                2171.3640689849854,
+                5371.119737625122,
+                625.5941390991211,
+                997.3104000091553
+            ],
+            "summarization_count": 0
+        }
+    },
+    "verifier_result": {
+        "rewards": {
+            "age_ok": 1.0,
+            "completeness_ok": 1.0,
+            "disposition_ok": 0.0,
+            "duplicate_free": 1.0,
+            "legal_id": 1.0,
+            "nesting_ok": 1.0,
+            "options_complete": 1.0,
+            "reward": 0.0,
+            "safety_ok": 1.0,
+            "schema_valid": 1.0
+        }
+    },
+    "verifier_environment_mode": "separate",
+    "exception_info": null,
+    "started_at": "2026-09-21T04:44:51.029111Z",
+    "finished_at": "2026-09-21T04:46:23.688954Z",
+    "environment_setup": {
+        "started_at": "2026-09-21T04:44:51.207305Z",
+        "finished_at": "2026-09-21T04:45:01.445663Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-09-21T04:45:01.445693Z",
+        "finished_at": "2026-09-21T04:45:31.727837Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-09-21T04:45:31.728038Z",
+        "finished_at": "2026-09-21T04:45:51.354820Z"
+    },
+    "verifier": {
+        "started_at": "2026-09-21T04:46:01.433784Z",
+        "finished_at": "2026-09-21T04:46:23.688908Z"
+    },
+    "step_results": null
+}

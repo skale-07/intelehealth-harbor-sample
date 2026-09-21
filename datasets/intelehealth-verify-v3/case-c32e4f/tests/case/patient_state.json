@@ -1,0 +1,114 @@
+{
+  "age": 55,
+  "answers": [
+    {
+      "free_text": "2 hours",
+      "option_ids": [],
+      "question_id": "ID_6b85e860-b27a-46e6-a60f-a6c10eb8b7db"
+    },
+    {
+      "free_text": null,
+      "option_ids": [
+        "ID_0cf109a7-5669-4afd-b5a5-05678f765ec9"
+      ],
+      "question_id": "ID_01f2916c-1675-495f-a49b-425cf8dae2c9"
+    },
+    {
+      "free_text": null,
+      "option_ids": [
+        "ID_96949bd1-cf34-4d25-9d65-d0c6bd60cf56"
+      ],
+      "question_id": "ID_d693c0a4-8021-4c2c-9b3c-fe2ca352cf6a"
+    },
+    {
+      "free_text": null,
+      "option_ids": [
+        "ID_9ead6dc9-2c99-4689-a00f-7a609d6832f7"
+      ],
+      "question_id": "ID_3c1f1576-9508-4c74-a35e-3f75acf9da60"
+    },
+    {
+      "free_text": null,
+      "option_ids": [
+        "ID_fabe45f8-6764-4d1e-8d0d-a40261db550c"
+      ],
+      "question_id": "ID_b021c353-3d82-4a5c-8917-ff38d6662a7b"
+    },
+    {
+      "free_text": null,
+      "option_ids": [
+        "ID_753b626a-c30b-4429-bb02-e8b3decda82e"
+      ],
+      "question_id": "ID_50cd4b8c-6e8d-4998-baaa-373c277e22b7"
+    },
+    {
+      "free_text": null,
+      "option_ids": [
+        "ID_e7e21222-516f-4bb7-be53-06f1ba010bbe"
+      ],
+      "question_id": "ID_c23fe3d8-ba59-40d0-b2fc-4013cd21a87d"
+    },
+    {
+      "free_text": null,
+      "option_ids": [
+        "ID_02fcb080-4efa-4608-8f19-985938576463"
+      ],
+      "question_id": "ID_a5beb441-0cc1-422b-9805-946de317e2dd"
+    },
+    {
+      "free_text": null,
+      "option_ids": [
+        "ID_383a59a3-8a12-4098-b8b9-124eea1cd8bb"
+      ],
+      "question_id": "ID_7d090a35-4685-4063-9101-f5ca9dcdb11c"
+    },
+    {
+      "free_text": null,
+      "option_ids": [
+        "ID_7e612f07-cb15-4ea1-afdd-c714aacf64d8"
+      ],
+      "question_id": "ID_d203fe4b-4015-47cc-b999-c7cb0c6b9f7d"
+    },
+    {
+      "free_text": null,
+      "option_ids": [
+        "ID_253612f4-b3c6-41ec-826f-e76fc6b7cb19"
+      ],
+      "question_id": "ID_8acf327f-18e6-48db-aba5-f9052276ed0c"
+    },
+    {
+      "free_text": null,
+      "option_ids": [
+        "ID_f55be4f7-196f-4afc-88fc-90127231e1ac"
+      ],
+      "question_id": "ID_2a5f6982-0694-48b5-8faa-06241e5e2279"
+    },
+    {
+      "free_text": null,
+      "option_ids": [
+        "ID_e27aa693-f730-4308-912a-58edaae5f822"
+      ],
+      "question_id": "ID_f4f25bdb-2a37-417e-9387-78645ed31fbf"
+    },
+    {
+      "free_text": null,
+      "option_ids": [
+        "ID_f9f4a188-9c0d-4ece-ad75-9c9a38760747"
+      ],
+      "question_id": "ID_20412fe8-64a9-4a42-bfee-d868b2273262"
+    },
+    {
+      "free_text": "No treatment taken.",
+      "option_ids": [],
+      "question_id": "ID_3c11df65-58f2-4319-ba52-bddc2f0acb39"
+    },
+    {
+      "free_text": "No additional information.",
+      "option_ids": [],
+      "question_id": "ID_46dcaefb-657b-421c-a711-b839f28dfa8c"
+    }
+  ],
+  "label": "Synthetic fixture \u2014 not a real visit",
+  "protocol_id": "ID_c492cec3-f0e8-4ab1-8b31-fd2f3b557e0b",
+  "protocol_name": "Chest pain"
+}

@@ -1,0 +1,19 @@
+{
+    "job_name": "intelehealth-verify-v3-gpt",
+    "n_concurrent_trials": 1,
+    "quiet": true,
+    "agents": [
+        {
+            "name": "terminus-2",
+            "model_name": "gpt-4o",
+            "env": {
+                "OPENAI_API_KEY": "${OPENAI_API_KEY}"
+            }
+        }
+    ],
+    "datasets": [
+        {
+            "path": "datasets/intelehealth-verify-v3"
+        }
+    ]
+}

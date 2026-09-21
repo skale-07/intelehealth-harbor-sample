@@ -1,0 +1,9 @@
+{
+  "case_id": "case-172394",
+  "pair_id": "pair-inv-01",
+  "policy_id": "demo-chest-pain-disposition-v3",
+  "report_slice": "disposition",
+  "suite": "invariance",
+  "task_kind": "one_shot_close",
+  "variant": "beta"
+}

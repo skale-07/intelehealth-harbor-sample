@@ -1,0 +1,12 @@
+{
+  "age_ok": 1.0,
+  "completeness_ok": 0.0,
+  "disposition_ok": 1.0,
+  "duplicate_free": 1.0,
+  "legal_id": 1.0,
+  "nesting_ok": 1.0,
+  "options_complete": 1.0,
+  "reward": 0.0,
+  "safety_ok": 1.0,
+  "schema_valid": 1.0
+}

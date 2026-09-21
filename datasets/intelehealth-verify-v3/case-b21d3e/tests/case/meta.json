@@ -1,0 +1,9 @@
+{
+  "case_id": "case-b21d3e",
+  "pair_id": "pair-age-01",
+  "policy_id": null,
+  "report_slice": "grammar",
+  "suite": "age_eligibility",
+  "task_kind": "one_shot_question",
+  "variant": "eligible"
+}

@@ -1,0 +1,16 @@
+{
+    "task": {
+        "path": "datasets/intelehealth-verify-v3/case-b21d3e",
+        "source": "intelehealth-verify-v3"
+    },
+    "trial_name": "case-b21d3e__MJTBv2X",
+    "trials_dir": "jobs/intelehealth-verify-v3-gpt",
+    "agent": {
+        "name": "terminus-2",
+        "model_name": "gpt-4o",
+        "env": {
+            "OPENAI_API_KEY": "${OPENAI_API_KEY}"
+        }
+    },
+    "job_id": "87283bb5-d0c1-45cb-ae69-3f8c027f9c21"
+}

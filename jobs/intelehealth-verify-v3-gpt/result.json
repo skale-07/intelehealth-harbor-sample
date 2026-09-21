@@ -1,0 +1,193 @@
+{
+    "id": "87283bb5-d0c1-45cb-ae69-3f8c027f9c21",
+    "started_at": "2026-09-21T00:41:22.530389",
+    "updated_at": "2026-09-21T01:01:46.173813",
+    "finished_at": "2026-09-21T01:01:46.173813",
+    "n_total_trials": 10,
+    "stats": {
+        "n_completed_trials": 10,
+        "n_errored_trials": 0,
+        "n_running_trials": 0,
+        "n_pending_trials": 0,
+        "n_cancelled_trials": 0,
+        "n_retries": 0,
+        "evals": {
+            "terminus-2__gpt-4o__intelehealth-verify-v3": {
+                "n_trials": 10,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "age_ok": 1.0,
+                        "completeness_ok": 0.9,
+                        "disposition_ok": 0.6,
+                        "duplicate_free": 1.0,
+                        "legal_id": 0.8,
+                        "nesting_ok": 1.0,
+                        "options_complete": 1.0,
+                        "reward": 0.2,
+                        "safety_ok": 1.0,
+                        "schema_valid": 0.9
+                    }
+                ],
+                "pass_at_k": {},
+                "reward_stats": {
+                    "age_ok": {
+                        "1.0": [
+                            "case-061283__ahAJWb2",
+                            "case-172394__5ZHjCVx",
+                            "case-2834a5__wkW9Kcu",
+                            "case-3945b6__h87j6sq",
+                            "case-a10c2d__jayxnju",
+                            "case-b21d3e__MJTBv2X",
+                            "case-c32e4f__pAM7SsK",
+                            "case-d43f50__CmiQCUp",
+                            "case-e54061__7xjXFPx",
+                            "case-f65172__gNLhgvT"
+                        ]
+                    },
+                    "completeness_ok": {
+                        "1.0": [
+                            "case-061283__ahAJWb2",
+                            "case-172394__5ZHjCVx",
+                            "case-2834a5__wkW9Kcu",
+                            "case-3945b6__h87j6sq",
+                            "case-a10c2d__jayxnju",
+                            "case-b21d3e__MJTBv2X",
+                            "case-c32e4f__pAM7SsK",
+                            "case-e54061__7xjXFPx",
+                            "case-f65172__gNLhgvT"
+                        ],
+                        "0.0": [
+                            "case-d43f50__CmiQCUp"
+                        ]
+                    },
+                    "disposition_ok": {
+                        "0.0": [
+                            "case-061283__ahAJWb2",
+                            "case-172394__5ZHjCVx",
+                            "case-3945b6__h87j6sq",
+                            "case-f65172__gNLhgvT"
+                        ],
+                        "1.0": [
+                            "case-2834a5__wkW9Kcu",
+                            "case-a10c2d__jayxnju",
+                            "case-b21d3e__MJTBv2X",
+                            "case-c32e4f__pAM7SsK",
+                            "case-d43f50__CmiQCUp",
+                            "case-e54061__7xjXFPx"
+                        ]
+                    },
+                    "duplicate_free": {
+                        "1.0": [
+                            "case-061283__ahAJWb2",
+                            "case-172394__5ZHjCVx",
+                            "case-2834a5__wkW9Kcu",
+                            "case-3945b6__h87j6sq",
+                            "case-a10c2d__jayxnju",
+                            "case-b21d3e__MJTBv2X",
+                            "case-c32e4f__pAM7SsK",
+                            "case-d43f50__CmiQCUp",
+                            "case-e54061__7xjXFPx",
+                            "case-f65172__gNLhgvT"
+                        ]
+                    },
+                    "legal_id": {
+                        "1.0": [
+                            "case-061283__ahAJWb2",
+                            "case-172394__5ZHjCVx",
+                            "case-2834a5__wkW9Kcu",
+                            "case-3945b6__h87j6sq",
+                            "case-c32e4f__pAM7SsK",
+                            "case-d43f50__CmiQCUp",
+                            "case-e54061__7xjXFPx",
+                            "case-f65172__gNLhgvT"
+                        ],
+                        "0.0": [
+                            "case-a10c2d__jayxnju",
+                            "case-b21d3e__MJTBv2X"
+                        ]
+                    },
+                    "nesting_ok": {
+                        "1.0": [
+                            "case-061283__ahAJWb2",
+                            "case-172394__5ZHjCVx",
+                            "case-2834a5__wkW9Kcu",
+                            "case-3945b6__h87j6sq",
+                            "case-a10c2d__jayxnju",
+                            "case-b21d3e__MJTBv2X",
+                            "case-c32e4f__pAM7SsK",
+                            "case-d43f50__CmiQCUp",
+                            "case-e54061__7xjXFPx",
+                            "case-f65172__gNLhgvT"
+                        ]
+                    },
+                    "options_complete": {
+                        "1.0": [
+                            "case-061283__ahAJWb2",
+                            "case-172394__5ZHjCVx",
+                            "case-2834a5__wkW9Kcu",
+                            "case-3945b6__h87j6sq",
+                            "case-a10c2d__jayxnju",
+                            "case-b21d3e__MJTBv2X",
+                            "case-c32e4f__pAM7SsK",
+                            "case-d43f50__CmiQCUp",
+                            "case-e54061__7xjXFPx",
+                            "case-f65172__gNLhgvT"
+                        ]
+                    },
+                    "reward": {
+                        "0.0": [
+                            "case-061283__ahAJWb2",
+                            "case-172394__5ZHjCVx",
+                            "case-2834a5__wkW9Kcu",
+                            "case-3945b6__h87j6sq",
+                            "case-a10c2d__jayxnju",
+                            "case-b21d3e__MJTBv2X",
+                            "case-d43f50__CmiQCUp",
+                            "case-f65172__gNLhgvT"
+                        ],
+                        "1.0": [
+                            "case-c32e4f__pAM7SsK",
+                            "case-e54061__7xjXFPx"
+                        ]
+                    },
+                    "safety_ok": {
+                        "1.0": [
+                            "case-061283__ahAJWb2",
+                            "case-172394__5ZHjCVx",
+                            "case-2834a5__wkW9Kcu",
+                            "case-3945b6__h87j6sq",
+                            "case-a10c2d__jayxnju",
+                            "case-b21d3e__MJTBv2X",
+                            "case-c32e4f__pAM7SsK",
+                            "case-d43f50__CmiQCUp",
+                            "case-e54061__7xjXFPx",
+                            "case-f65172__gNLhgvT"
+                        ]
+                    },
+                    "schema_valid": {
+                        "1.0": [
+                            "case-061283__ahAJWb2",
+                            "case-172394__5ZHjCVx",
+                            "case-3945b6__h87j6sq",
+                            "case-a10c2d__jayxnju",
+                            "case-b21d3e__MJTBv2X",
+                            "case-c32e4f__pAM7SsK",
+                            "case-d43f50__CmiQCUp",
+                            "case-e54061__7xjXFPx",
+                            "case-f65172__gNLhgvT"
+                        ],
+                        "0.0": [
+                            "case-2834a5__wkW9Kcu"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        },
+        "n_input_tokens": 171364,
+        "n_cache_tokens": 120960,
+        "n_output_tokens": 8430,
+        "cost_usd": 0.36151000000000005
+    }
+}

@@ -1,0 +1,7 @@
+{
+  "schema_version": "0.1.0",
+  "protocol_id": "Chest pain",
+  "action": "ask_question",
+  "question_id": "ID_12345678-9abc-def0-1234-56789abcdef0",
+  "option_ids": ["ID_23456789-0123-4567-89ab-cdef01234567"]
+}
