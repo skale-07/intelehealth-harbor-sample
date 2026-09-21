@@ -1,5 +1,7 @@
 # Intelehealth Harbor sample (Chest pain)
 
+Harbor job link: https://hub.harborframework.com/users/skale-07
+
 Harbor tasks for CHW **intake verification** against the Intelehealth Chest pain protocol. Agent sandbox writes `proposal.json` or `agent.py`. A separate verifier image grades IDs against the protocol plus labeled demo rules the agent cannot see.
 
 Three frozen datasets sit side by side: **v1** (harness regression), **v2** (stop cheap tricks), **v3** (force the actual choice). Oracle reward 1.0 means the official solution passes the harness, not that a live model was scored. A live-model mean is only comparable inside the same dataset.
