@@ -1,0 +1,21 @@
+# Three Chest pain sample tasks only. Run from this folder:
+#   harbor run -c job.yaml -a oracle -y -q
+# Then upload:
+#   harbor upload jobs/intelehealth-verify-chest-pain-cto --public
+
+job_name: intelehealth-verify-chest-pain-cto
+jobs_dir: jobs
+n_attempts: 1
+n_concurrent_trials: 1
+debug: false
+
+agents:
+  - name: oracle
+
+datasets:
+  - path: datasets/intelehealth-verify
+
+environment:
+  type: docker
+  force_build: false
+  delete: true

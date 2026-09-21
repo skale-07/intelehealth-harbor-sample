@@ -1,0 +1,36 @@
+schema_version = "1.4"
+artifacts = ["/app/proposal.json"]
+
+[task]
+name = "intelehealth-verify/chest-pain-undertriage"
+version = "0.1.0"
+description = "Close a complete Chest pain encounter. Local management is blocked by hidden demo policy when difficulty-breathing is selected."
+keywords = ["intelehealth", "protocol", "undertriage", "verification"]
+
+[metadata]
+category = "clinical-verification"
+difficulty_explanation = "Protocol completeness is ground truth. Escalation option IDs are demo policy baked only into the verifier image."
+protocol_file = "Chest pain.json"
+demo_safety = true
+
+[verifier]
+timeout_sec = 120.0
+environment_mode = "separate"
+
+[verifier.environment]
+# Intended: no-network. Harbor's Docker provider only enforces that when the
+# daemon kernel has CONFIG_NFT_FIB_INET (nftables FIB). Docker Desktop's Linux
+# VM here does not, so Harbor rejects no-network. Isolation is the separate
+# verifier image, not egress policy.
+network_mode = "public"
+os = "linux"
+
+[agent]
+timeout_sec = 180.0
+
+[environment]
+os = "linux"
+network_mode = "public"
+build_timeout_sec = 600.0
+cpus = 1
+memory_mb = 2048

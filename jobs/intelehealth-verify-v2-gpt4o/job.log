@@ -1,0 +1,353 @@
+Skipping image OS validation for hb__cec7b4bb579de458a9f91478216f4a74: docker inspect returned 1
+Installing: tmux, asciinema
+Detected system: {'os': 'debian-based', 'package_manager': 'apt-get', 'update_command': None}
+Installing tools using apt-get: DEBIAN_FRONTEND=noninteractive apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y tmux asciinema
+Trial case-90e2a8__5tkfRMZ cancelled
+Collecting main service artifacts
+Failed to download artifact '/app/agent.py' from service 'main' (best-effort)
+Traceback (most recent call last):
+  File "/home/skale/.local/share/uv/tools/harbor/lib/python3.12/site-packages/harbor/trial/trial.py", line 406, in run
+    await self._prepare()
+  File "/home/skale/.local/share/uv/tools/harbor/lib/python3.12/site-packages/harbor/trial/trial.py", line 450, in _prepare
+    await self._setup_agent()
+  File "/home/skale/.local/share/uv/tools/harbor/lib/python3.12/site-packages/harbor/trial/trial.py", line 1455, in _setup_agent
+    await asyncio.wait_for(
+  File "/usr/lib/python3.12/asyncio/tasks.py", line 520, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/home/skale/.local/share/uv/tools/harbor/lib/python3.12/site-packages/harbor/agents/terminus_2/terminus_2.py", line 389, in setup
+    await self._session.start()
+  File "/home/skale/.local/share/uv/tools/harbor/lib/python3.12/site-packages/harbor/agents/terminus_2/tmux_session.py", line 498, in start
+    await self._attempt_tmux_installation()
+  File "/home/skale/.local/share/uv/tools/harbor/lib/python3.12/site-packages/harbor/agents/terminus_2/tmux_session.py", line 110, in _attempt_tmux_installation
+    await asyncio.wait_for(
+  File "/usr/lib/python3.12/asyncio/tasks.py", line 520, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/home/skale/.local/share/uv/tools/harbor/lib/python3.12/site-packages/harbor/agents/terminus_2/tmux_session.py", line 162, in _install_recording_tools
+    result = await self.environment.exec(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/skale/.local/share/uv/tools/harbor/lib/python3.12/site-packages/harbor/environments/docker/docker.py", line 1101, in exec
+    return await self._compose_exec(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/skale/.local/share/uv/tools/harbor/lib/python3.12/site-packages/harbor/environments/docker/docker.py", line 1178, in _compose_exec
+    return await self._run_docker_compose_command(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/skale/.local/share/uv/tools/harbor/lib/python3.12/site-packages/harbor/environments/docker/docker.py", line 649, in _run_docker_compose_command
+    result = await self._collect_buffered_output(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/skale/.local/share/uv/tools/harbor/lib/python3.12/site-packages/harbor/environments/docker/docker.py", line 675, in _collect_buffered_output
+    stdout_bytes, stderr_bytes = await asyncio.wait_for(
+                                 ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/tasks.py", line 520, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/subprocess.py", line 201, in communicate
+    stdin, stdout, stderr = await tasks.gather(stdin, stdout, stderr)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/subprocess.py", line 181, in _read_stream
+    output = await stream.read()
+             ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/streams.py", line 706, in read
+    block = await self.read(self._limit)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/streams.py", line 713, in read
+    await self._wait_for_data('read')
+  File "/usr/lib/python3.12/asyncio/streams.py", line 545, in _wait_for_data
+    await self._waiter
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/skale/.local/share/uv/tools/harbor/lib/python3.12/site-packages/harbor/trial/artifact_handler.py", line 351, in _download_artifact
+    await source_env.service_download_file(
+  File "/home/skale/.local/share/uv/tools/harbor/lib/python3.12/site-packages/harbor/environments/docker/docker.py", line 1057, in service_download_file
+    await self.download_file(source_path, target_path)
+  File "/home/skale/.local/share/uv/tools/harbor/lib/python3.12/site-packages/harbor/environments/docker/docker.py", line 1042, in download_file
+    await self._platform.download_file(source_path, target_path)
+  File "/home/skale/.local/share/uv/tools/harbor/lib/python3.12/site-packages/harbor/environments/docker/docker_unix.py", line 185, in download_file
+    await self._env._run_docker_compose_command(
+  File "/home/skale/.local/share/uv/tools/harbor/lib/python3.12/site-packages/harbor/environments/docker/docker.py", line 656, in _run_docker_compose_command
+    raise RuntimeError(
+RuntimeError: Docker compose command failed for environment case-90e2a8. Command: docker compose --project-name case-90e2a8__5tkfrmz__env --project-directory /home/skale/intelehealth-harbor-sample/datasets/intelehealth-verify-v2/case-90e2a8/environment -f /tmp/tmpw_w34bem/case-90e2a8__5tkfRMZ__env-docker-compose-resources.json -f /home/skale/.local/share/uv/tools/harbor/lib/python3.12/site-packages/harbor/environments/docker/docker-compose-build.yaml -f /tmp/tmpr5diu32s/docker-compose-environment.json -f /tmp/tmplm_w4u1f/docker-compose-mounts.json cp main:/app/agent.py jobs/intelehealth-verify-v2-gpt4o/case-90e2a8__5tkfRMZ/artifacts/app/agent.py. Return code: 1. Stdout:  case-90e2a8__5tkfrmz__env-main-1 copy case-90e2a8__5tkfrmz__env-main-1:/app/agent.py to jobs/intelehealth-verify-v2-gpt4o/case-90e2a8__5tkfRMZ/artifacts/app/agent.py Copying
+Error response from daemon: Could not find the file /app/agent.py in container 322b87c6e011d2d2ad4875facf09ec767196720c3f4cc8df8d31b2abd416b4d0
+. Stderr: None. 
+Cleanup interrupted for case-90e2a8__5tkfRMZ, but agent environment stop is shielded and will complete
+Skipping image OS validation for hb__cec7b4bb579de458a9f91478216f4a74: docker inspect returned 1
+Installing: tmux, asciinema
+Detected system: {'os': 'debian-based', 'package_manager': 'apt-get', 'update_command': None}
+Installing tools using apt-get: DEBIAN_FRONTEND=noninteractive apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y tmux asciinema
+Starting recording.
+Sending keys: ['asciinema rec --stdin /logs/agent/recording.cast', 'Enter'] min_timeout_sec: 1.0 max_timeout_sec: 180.0
+Sending keys: ['clear', 'Enter'] min_timeout_sec: 0.0 max_timeout_sec: 180.0
+Parser warnings: - Extra text detected before JSON object
+- Extra text detected after JSON object
+Sending keys: ['ls -la /app\n'] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ['cat /app/case/patient_state.json\n'] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ['cat /app/case/protocol.json\n'] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Trajectory dumped to jobs/intelehealth-verify-v2-gpt4o/case-89d1f7__LqbkoiX/agent/trajectory.json
+Parser warnings: - Extra text detected before JSON object
+- Extra text detected after JSON object
+Sending keys: ['nano /app/agent.py\n'] min_timeout_sec: 1.0 max_timeout_sec: 180.0
+Trajectory dumped to jobs/intelehealth-verify-v2-gpt4o/case-89d1f7__LqbkoiX/agent/trajectory.json
+Parser warnings: - Extra text detected before JSON object
+- Extra text detected after JSON object
+Sending keys: ['vi /app/agent.py\n'] min_timeout_sec: 1.0 max_timeout_sec: 180.0
+Trajectory dumped to jobs/intelehealth-verify-v2-gpt4o/case-89d1f7__LqbkoiX/agent/trajectory.json
+Parser warnings: - Extra text detected before JSON object
+- Extra text detected after JSON object
+Sending keys: ['which vim\n'] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ['which ed\n'] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Trajectory dumped to jobs/intelehealth-verify-v2-gpt4o/case-89d1f7__LqbkoiX/agent/trajectory.json
+Parser warnings: - Extra text detected before JSON object
+- Extra text detected after JSON object
+Sending keys: ["echo 'def propose(state: dict, protocol) -> dict:' > /app/agent.py\n"] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ["echo '    # Example implementation: Ask the first question' >> /app/agent.py\n"] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ["echo '    questions = protocol.get_legal_next_questions()' >> /app/agent.py\n"] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ["echo '    if questions:' >> /app/agent.py\n"] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ["echo '        question_id = questions[0]' >> /app/agent.py\n"] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ["echo '        options = protocol.options_for(question_id)' >> /app/agent.py\n"] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ["echo '        return {' >> /app/agent.py\n"] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ['echo \'            "schema_version": "0.1.0",\' >> /app/agent.py\n'] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ['echo \'            "protocol_id": "Chest pain",\' >> /app/agent.py\n'] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ['echo \'            "action": "ask_question",\' >> /app/agent.py\n'] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ['echo \'            "question_id": question_id,\' >> /app/agent.py\n'] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ['echo \'            "option_ids": [option["id"] for option in options]\' >> /app/agent.py\n'] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ["echo '        }' >> /app/agent.py\n"] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ["echo '    else:' >> /app/agent.py\n"] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ["echo '        return {' >> /app/agent.py\n"] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ['echo \'            "schema_version": "0.1.0",\' >> /app/agent.py\n'] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ['echo \'            "protocol_id": "Chest pain",\' >> /app/agent.py\n'] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ['echo \'            "action": "close_and_act",\' >> /app/agent.py\n'] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ['echo \'            "disposition": "local_management"\' >> /app/agent.py\n'] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ["echo '        }' >> /app/agent.py\n"] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Trajectory dumped to jobs/intelehealth-verify-v2-gpt4o/case-89d1f7__LqbkoiX/agent/trajectory.json
+Parser warnings: - Extra text detected before JSON object
+- Extra text detected after JSON object
+Sending keys: ['cat /app/agent.py\n'] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Trajectory dumped to jobs/intelehealth-verify-v2-gpt4o/case-89d1f7__LqbkoiX/agent/trajectory.json
+Parser warnings: - Extra text detected before JSON object
+- Extra text detected after JSON object
+Trajectory dumped to jobs/intelehealth-verify-v2-gpt4o/case-89d1f7__LqbkoiX/agent/trajectory.json
+Trajectory dumped to jobs/intelehealth-verify-v2-gpt4o/case-89d1f7__LqbkoiX/agent/trajectory.json
+Collecting main service artifacts
+Skipping image OS validation for hb__00eebd1805e940a2483ce2f584bf3a1d: docker inspect returned 1
+Skipping image OS validation for hb__e1c3383ccdd332c063f70b54939586e0: docker inspect returned 1
+Installing: tmux, asciinema
+Detected system: {'os': 'debian-based', 'package_manager': 'apt-get', 'update_command': None}
+Installing tools using apt-get: DEBIAN_FRONTEND=noninteractive apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y tmux asciinema
+Starting recording.
+Sending keys: ['asciinema rec --stdin /logs/agent/recording.cast', 'Enter'] min_timeout_sec: 1.0 max_timeout_sec: 180.0
+Sending keys: ['clear', 'Enter'] min_timeout_sec: 0.0 max_timeout_sec: 180.0
+Parser warnings: - Extra text detected before JSON object
+- Extra text detected after JSON object
+Sending keys: ['ls -la\n'] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Trajectory dumped to jobs/intelehealth-verify-v2-gpt4o/case-23d5f1__9fdS67g/agent/trajectory.json
+Parser warnings: - Extra text detected before JSON object
+- Extra text detected after JSON object
+Sending keys: ['cd case\n'] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ['ls -la\n'] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Trajectory dumped to jobs/intelehealth-verify-v2-gpt4o/case-23d5f1__9fdS67g/agent/trajectory.json
+Parser warnings: - Extra text detected before JSON object
+- Extra text detected after JSON object
+Sending keys: ['cat patient_state.json\n'] min_timeout_sec: 0.5 max_timeout_sec: 180.0
+Sending keys: ['cat protocol.json\n'] min_timeout_sec: 1.0 max_timeout_sec: 180.0
+Trajectory dumped to jobs/intelehealth-verify-v2-gpt4o/case-23d5f1__9fdS67g/agent/trajectory.json
+Parser warnings: - Extra text detected before JSON object
+- Extra text detected after JSON object
+Sending keys: ['echo \'{"schema_version": "0.1.0", "protocol_id": "Chest pain", "action": "ask_question", "question_id": "ID_d693c0a4-8021-4c2c-9b3c-fe2ca352cf6a", "option_ids": ["ID_b6ccd295-a061-4974-9d97-8983588424c7", "ID_1c51bdc9-0069-46e9-9e7e-6bff95f8eacf", "ID_96949bd1-cf34-4d25-9d65-d0c6bd60cf56", "ID_eca8a1f2-e03c-459f-99a0-85bfd5547764"]}\' > /app/proposal.json\n'] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Trajectory dumped to jobs/intelehealth-verify-v2-gpt4o/case-23d5f1__9fdS67g/agent/trajectory.json
+Parser warnings: - Extra text detected before JSON object
+- Extra text detected after JSON object
+Parser warnings: - Extra text detected before JSON object
+- Extra text detected after JSON object
+Trajectory dumped to jobs/intelehealth-verify-v2-gpt4o/case-23d5f1__9fdS67g/agent/trajectory.json
+Trajectory dumped to jobs/intelehealth-verify-v2-gpt4o/case-23d5f1__9fdS67g/agent/trajectory.json
+Collecting main service artifacts
+Skipping image OS validation for hb__d45b6b8cbe2619c4d91783fdb320d961: docker inspect returned 1
+Skipping image OS validation for hb__29af7979065d9f7c7cdb210408fd612a: docker inspect returned 1
+Installing: tmux, asciinema
+Detected system: {'os': 'debian-based', 'package_manager': 'apt-get', 'update_command': None}
+Installing tools using apt-get: DEBIAN_FRONTEND=noninteractive apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y tmux asciinema
+Starting recording.
+Sending keys: ['asciinema rec --stdin /logs/agent/recording.cast', 'Enter'] min_timeout_sec: 1.0 max_timeout_sec: 180.0
+Sending keys: ['clear', 'Enter'] min_timeout_sec: 0.0 max_timeout_sec: 180.0
+Parser warnings: - Extra text detected before JSON object
+- Extra text detected after JSON object
+Sending keys: ['ls /app/case\n'] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ['cat /app/case/patient_state.json\n'] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ['cat /app/case/protocol.json\n'] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Trajectory dumped to jobs/intelehealth-verify-v2-gpt4o/case-01a7c9__afCSRi5/agent/trajectory.json
+Parser warnings: - Extra text detected before JSON object
+- Extra text detected after JSON object
+Sending keys: ['echo \'{\n  "schema_version": "0.1.0",\n  "protocol_id": "Chest pain",\n  "action": "ask_question",\n  "question_id": "ID_01f2916c-1675-495f-a49b-425cf8dae2c9",\n  "option_ids": ["ID_0cf109a7-5669-4afd-b5a5-05678f765ec9", "ID_9a670465-8dbb-47ba-8919-687096341c1b"]\n}\' > /app/proposal.json\n'] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Trajectory dumped to jobs/intelehealth-verify-v2-gpt4o/case-01a7c9__afCSRi5/agent/trajectory.json
+Parser warnings: - Extra text detected before JSON object
+- Extra text detected after JSON object
+Parser warnings: - Extra text detected before JSON object
+- Extra text detected after JSON object
+Trajectory dumped to jobs/intelehealth-verify-v2-gpt4o/case-01a7c9__afCSRi5/agent/trajectory.json
+Trajectory dumped to jobs/intelehealth-verify-v2-gpt4o/case-01a7c9__afCSRi5/agent/trajectory.json
+Collecting main service artifacts
+Skipping image OS validation for hb__dd9ef4403e9d141ee797396f1300a5e2: docker inspect returned 1
+Skipping image OS validation for hb__ef7cf2c654fba8da449da85b355199f5: docker inspect returned 1
+Installing: tmux, asciinema
+Detected system: {'os': 'debian-based', 'package_manager': 'apt-get', 'update_command': None}
+Installing tools using apt-get: DEBIAN_FRONTEND=noninteractive apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y tmux asciinema
+Starting recording.
+Sending keys: ['asciinema rec --stdin /logs/agent/recording.cast', 'Enter'] min_timeout_sec: 1.0 max_timeout_sec: 180.0
+Sending keys: ['clear', 'Enter'] min_timeout_sec: 0.0 max_timeout_sec: 180.0
+Parser warnings: - Extra text detected before JSON object
+- Extra text detected after JSON object
+Sending keys: ['ls -la\n'] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ['cat /app/case/patient_state.json\n'] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ['cat /app/case/protocol.json\n'] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Trajectory dumped to jobs/intelehealth-verify-v2-gpt4o/case-12c4e8__ssnHiFy/agent/trajectory.json
+Parser warnings: - Extra text detected before JSON object
+- Extra text detected after JSON object
+Sending keys: ['echo \'{"schema_version": "0.1.0", "protocol_id": "Chest pain", "action": "ask_question", "question_id": "ID_01f2916c-1675-495f-a49b-425cf8dae2c9", "option_ids": ["ID_0cf109a7-5669-4afd-b5a5-05678f765ec9", "ID_9a670465-8dbb-47ba-8919-687096341c1b"]}\' > /app/proposal.json\n'] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Trajectory dumped to jobs/intelehealth-verify-v2-gpt4o/case-12c4e8__ssnHiFy/agent/trajectory.json
+Parser warnings: - Extra text detected before JSON object
+- Extra text detected after JSON object
+Parser warnings: - Extra text detected before JSON object
+- Extra text detected after JSON object
+Trajectory dumped to jobs/intelehealth-verify-v2-gpt4o/case-12c4e8__ssnHiFy/agent/trajectory.json
+Trajectory dumped to jobs/intelehealth-verify-v2-gpt4o/case-12c4e8__ssnHiFy/agent/trajectory.json
+Collecting main service artifacts
+Skipping image OS validation for hb__97197e0b751c33cf3a4dc256e00fbcf1: docker inspect returned 1
+Skipping image OS validation for hb__7faa8d7458d3a5376b4f7534841c39f3: docker inspect returned 1
+Installing: tmux, asciinema
+Detected system: {'os': 'debian-based', 'package_manager': 'apt-get', 'update_command': None}
+Installing tools using apt-get: DEBIAN_FRONTEND=noninteractive apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y tmux asciinema
+Starting recording.
+Sending keys: ['asciinema rec --stdin /logs/agent/recording.cast', 'Enter'] min_timeout_sec: 1.0 max_timeout_sec: 180.0
+Sending keys: ['clear', 'Enter'] min_timeout_sec: 0.0 max_timeout_sec: 180.0
+Parser warnings: - Extra text detected before JSON object
+- Extra text detected after JSON object
+Sending keys: ['ls -la\n'] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Trajectory dumped to jobs/intelehealth-verify-v2-gpt4o/case-34e6a2__78t4qgk/agent/trajectory.json
+Parser warnings: - Extra text detected before JSON object
+- Extra text detected after JSON object
+Sending keys: ['cd case\n'] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ['ls -la\n'] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Trajectory dumped to jobs/intelehealth-verify-v2-gpt4o/case-34e6a2__78t4qgk/agent/trajectory.json
+Parser warnings: - Extra text detected before JSON object
+- Extra text detected after JSON object
+Sending keys: ['cat patient_state.json\n'] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Trajectory dumped to jobs/intelehealth-verify-v2-gpt4o/case-34e6a2__78t4qgk/agent/trajectory.json
+Parser warnings: - Extra text detected before JSON object
+- Extra text detected after JSON object
+Sending keys: ['cat protocol.json\n'] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Trajectory dumped to jobs/intelehealth-verify-v2-gpt4o/case-34e6a2__78t4qgk/agent/trajectory.json
+Parser warnings: - Extra text detected before JSON object
+- Extra text detected after JSON object
+Sending keys: ['echo \'{"schema_version": "0.1.0", "protocol_id": "Chest pain", "action": "ask_question", "question_id": "ID_d693c0a4-8021-4c2c-9b3c-fe2ca352cf6a", "option_ids": ["ID_b6ccd295-a061-4974-9d97-8983588424c7", "ID_1c51bdc9-0069-46e9-9e7e-6bff95f8eacf", "ID_96949bd1-cf34-4d25-9d65-d0c6bd60cf56", "ID_eca8a1f2-e03c-459f-99a0-85bfd5547764"] }\' > /app/proposal.json\n'] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Trajectory dumped to jobs/intelehealth-verify-v2-gpt4o/case-34e6a2__78t4qgk/agent/trajectory.json
+Parser warnings: - Extra text detected before JSON object
+- Extra text detected after JSON object
+Parser warnings: - Extra text detected before JSON object
+- Extra text detected after JSON object
+Trajectory dumped to jobs/intelehealth-verify-v2-gpt4o/case-34e6a2__78t4qgk/agent/trajectory.json
+Trajectory dumped to jobs/intelehealth-verify-v2-gpt4o/case-34e6a2__78t4qgk/agent/trajectory.json
+Collecting main service artifacts
+Skipping image OS validation for hb__ccda16c52a36fa76db6bc90cf87483f9: docker inspect returned 1
+Skipping image OS validation for hb__6163e0391c47cd7727e68e22ce23fff4: docker inspect returned 1
+Installing: tmux, asciinema
+Detected system: {'os': 'debian-based', 'package_manager': 'apt-get', 'update_command': None}
+Installing tools using apt-get: DEBIAN_FRONTEND=noninteractive apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y tmux asciinema
+Starting recording.
+Sending keys: ['asciinema rec --stdin /logs/agent/recording.cast', 'Enter'] min_timeout_sec: 1.0 max_timeout_sec: 180.0
+Sending keys: ['clear', 'Enter'] min_timeout_sec: 0.0 max_timeout_sec: 180.0
+Parser warnings: - Extra text detected before JSON object
+- Extra text detected after JSON object
+Sending keys: ['cat /app/case/patient_state.json\n'] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ['cat /app/case/protocol.json\n'] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Trajectory dumped to jobs/intelehealth-verify-v2-gpt4o/case-67b9d5__mXghBtN/agent/trajectory.json
+Parser warnings: - Extra text detected before JSON object
+- Extra text detected after JSON object
+Sending keys: ['echo \'{"schema_version": "0.1.0", "protocol_id": "Chest pain", "action": "close_and_act", "disposition": "urgent"}\' > /app/proposal.json\n'] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Trajectory dumped to jobs/intelehealth-verify-v2-gpt4o/case-67b9d5__mXghBtN/agent/trajectory.json
+Parser warnings: - Extra text detected before JSON object
+- Extra text detected after JSON object
+Sending keys: ['echo \'{"schema_version": "0.1.0", "protocol_id": "Chest pain", "action": "close_and_act", "disposition": "urgent"}\' > /app/proposal.json\n'] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Trajectory dumped to jobs/intelehealth-verify-v2-gpt4o/case-67b9d5__mXghBtN/agent/trajectory.json
+Trajectory dumped to jobs/intelehealth-verify-v2-gpt4o/case-67b9d5__mXghBtN/agent/trajectory.json
+Collecting main service artifacts
+Skipping image OS validation for hb__c6029749d475320169e73bb16190290d: docker inspect returned 1
+Skipping image OS validation for hb__cfb9f32f3a64d24e2cfb55ef496f910a: docker inspect returned 1
+Installing: tmux, asciinema
+Detected system: {'os': 'debian-based', 'package_manager': 'apt-get', 'update_command': None}
+Installing tools using apt-get: DEBIAN_FRONTEND=noninteractive apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y tmux asciinema
+Starting recording.
+Sending keys: ['asciinema rec --stdin /logs/agent/recording.cast', 'Enter'] min_timeout_sec: 1.0 max_timeout_sec: 180.0
+Sending keys: ['clear', 'Enter'] min_timeout_sec: 0.0 max_timeout_sec: 180.0
+Parser warnings: - Extra text detected before JSON object
+- Extra text detected after JSON object
+Sending keys: ['ls /app/case\n'] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Trajectory dumped to jobs/intelehealth-verify-v2-gpt4o/case-45f7b3__5vevnxz/agent/trajectory.json
+Parser warnings: - Extra text detected before JSON object
+- Extra text detected after JSON object
+Sending keys: ['cat /app/case/patient_state.json\n'] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ['cat /app/case/protocol.json\n'] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Trajectory dumped to jobs/intelehealth-verify-v2-gpt4o/case-45f7b3__5vevnxz/agent/trajectory.json
+Parser warnings: - Extra text detected before JSON object
+- Extra text detected after JSON object
+Sending keys: ['echo \'{"schema_version": "0.1.0", "protocol_id": "Chest pain", "action": "close_and_act", "disposition": "urgent"}\' > /app/proposal.json\n'] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Trajectory dumped to jobs/intelehealth-verify-v2-gpt4o/case-45f7b3__5vevnxz/agent/trajectory.json
+Parser warnings: - Extra text detected before JSON object
+- Extra text detected after JSON object
+Sending keys: ['mv /app/proposal.jsn /app/proposal.json\n'] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Trajectory dumped to jobs/intelehealth-verify-v2-gpt4o/case-45f7b3__5vevnxz/agent/trajectory.json
+Trajectory dumped to jobs/intelehealth-verify-v2-gpt4o/case-45f7b3__5vevnxz/agent/trajectory.json
+Collecting main service artifacts
+Skipping image OS validation for hb__bed18177867a4c65a9d3b956c7f91c9b: docker inspect returned 1
+Skipping image OS validation for hb__aadc55d774530dca65dff98208ec7173: docker inspect returned 1
+Installing: tmux, asciinema
+Detected system: {'os': 'debian-based', 'package_manager': 'apt-get', 'update_command': None}
+Installing tools using apt-get: DEBIAN_FRONTEND=noninteractive apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y tmux asciinema
+Starting recording.
+Sending keys: ['asciinema rec --stdin /logs/agent/recording.cast', 'Enter'] min_timeout_sec: 1.0 max_timeout_sec: 180.0
+Sending keys: ['clear', 'Enter'] min_timeout_sec: 0.0 max_timeout_sec: 180.0
+Parser warnings: - Extra text detected before JSON object
+- Extra text detected after JSON object
+Sending keys: ['cat /app/case/patient_state.json\n'] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ['cat /app/case/protocol.json\n'] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Trajectory dumped to jobs/intelehealth-verify-v2-gpt4o/case-56a8c4__7u9TYFN/agent/trajectory.json
+Parser warnings: - Extra text detected before JSON object
+- Extra text detected after JSON object
+Sending keys: ['echo \'{"schema_version": "0.1.0", "protocol_id": "Chest pain", "action": "close_and_act", "disposition": "refer"}\' > /app/proposal.json\n'] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Trajectory dumped to jobs/intelehealth-verify-v2-gpt4o/case-56a8c4__7u9TYFN/agent/trajectory.json
+Parser warnings: - Extra text detected before JSON object
+- Extra text detected after JSON object
+Parser warnings: - Extra text detected before JSON object
+- Extra text detected after JSON object
+Trajectory dumped to jobs/intelehealth-verify-v2-gpt4o/case-56a8c4__7u9TYFN/agent/trajectory.json
+Trajectory dumped to jobs/intelehealth-verify-v2-gpt4o/case-56a8c4__7u9TYFN/agent/trajectory.json
+Collecting main service artifacts
+Skipping image OS validation for hb__7bb5840e9d42a75a6ceed697965ef7af: docker inspect returned 1
+Skipping image OS validation for hb__c97e59d17a45651af8e4a204ff6e23a5: docker inspect returned 1
+Installing: tmux, asciinema
+Detected system: {'os': 'debian-based', 'package_manager': 'apt-get', 'update_command': None}
+Installing tools using apt-get: DEBIAN_FRONTEND=noninteractive apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y tmux asciinema
+Starting recording.
+Sending keys: ['asciinema rec --stdin /logs/agent/recording.cast', 'Enter'] min_timeout_sec: 1.0 max_timeout_sec: 180.0
+Sending keys: ['clear', 'Enter'] min_timeout_sec: 0.0 max_timeout_sec: 180.0
+Parser warnings: - Extra text detected before JSON object
+- Extra text detected after JSON object
+Sending keys: ['ls -la /app/case\n'] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ['cat /app/case/patient_state.json\n'] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Sending keys: ['cat /app/case/protocol.json\n'] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Trajectory dumped to jobs/intelehealth-verify-v2-gpt4o/case-78c0e6__tTdskMZ/agent/trajectory.json
+Parser warnings: - Extra text detected before JSON object
+- Extra text detected after JSON object
+Sending keys: ['echo \'{"schema_version": "0.1.0", "protocol_id": "Chest pain", "action": "close_and_act", "disposition": "refer"}\' > /app/proposal.json\n'] min_timeout_sec: 0.1 max_timeout_sec: 180.0
+Trajectory dumped to jobs/intelehealth-verify-v2-gpt4o/case-78c0e6__tTdskMZ/agent/trajectory.json
+Parser warnings: - Extra text detected before JSON object
+- Extra text detected after JSON object
+Parser warnings: - Extra text detected before JSON object
+- Extra text detected after JSON object
+Trajectory dumped to jobs/intelehealth-verify-v2-gpt4o/case-78c0e6__tTdskMZ/agent/trajectory.json
+Trajectory dumped to jobs/intelehealth-verify-v2-gpt4o/case-78c0e6__tTdskMZ/agent/trajectory.json
+Collecting main service artifacts
+Skipping image OS validation for hb__1c7645a0c90785e9d419a5333b36c82b: docker inspect returned 1

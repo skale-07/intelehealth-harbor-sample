@@ -1,0 +1,41 @@
+{
+    "schema_version": 2,
+    "task": {
+        "name": "case-45f7b3",
+        "version": "0.2.0",
+        "type": "local",
+        "digest": "sha256:b78f06f0059f5d2f45c3010e17b4f430e67c29c05546c60355e7668c5573c9c7",
+        "source": "intelehealth-verify-v2",
+        "path": "datasets/intelehealth-verify-v2/case-45f7b3"
+    },
+    "install_only": false,
+    "timeout_multiplier": 1.0,
+    "agent": {
+        "name": "terminus-2",
+        "model_name": "gpt-4o",
+        "skills": [],
+        "resume_trajectory": false,
+        "extra_allowed_hosts": [],
+        "kwargs": {},
+        "env": {
+            "OPENAI_API_KEY": "${OPENAI_API_KEY}"
+        },
+        "mcp_servers": []
+    },
+    "bridge_inputs": {},
+    "skills": [],
+    "environment": {
+        "type": "docker",
+        "force_build": false,
+        "delete": true,
+        "cpu_enforcement_policy": "auto",
+        "memory_enforcement_policy": "auto",
+        "extra_docker_compose": [],
+        "kwargs": {},
+        "extra_allowed_hosts": []
+    },
+    "verifier": {
+        "disable": false,
+        "environment_mode": "separate"
+    }
+}

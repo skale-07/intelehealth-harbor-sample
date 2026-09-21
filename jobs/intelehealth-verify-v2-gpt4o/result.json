@@ -1,0 +1,171 @@
+{
+    "id": "d9d46590-0f66-4507-b95d-c5be0d0ca03a",
+    "started_at": "2026-09-20T18:26:59.955511",
+    "updated_at": "2026-09-20T18:41:39.793046",
+    "finished_at": "2026-09-20T18:41:39.793046",
+    "n_total_trials": 10,
+    "stats": {
+        "n_completed_trials": 10,
+        "n_errored_trials": 1,
+        "n_running_trials": 0,
+        "n_pending_trials": 0,
+        "n_cancelled_trials": 1,
+        "n_retries": 0,
+        "evals": {
+            "terminus-2__gpt-4o__intelehealth-verify-v2": {
+                "n_trials": 9,
+                "n_errors": 1,
+                "metrics": [
+                    {
+                        "age_ok": 0.9,
+                        "completeness_ok": 0.8,
+                        "disposition_ok": 0.6,
+                        "duplicate_free": 0.9,
+                        "legal_id": 0.9,
+                        "nesting_ok": 0.9,
+                        "reward": 0.5,
+                        "safety_ok": 0.9,
+                        "schema_valid": 0.8
+                    }
+                ],
+                "pass_at_k": {},
+                "reward_stats": {
+                    "age_ok": {
+                        "1.0": [
+                            "case-89d1f7__LqbkoiX",
+                            "case-23d5f1__9fdS67g",
+                            "case-01a7c9__afCSRi5",
+                            "case-12c4e8__ssnHiFy",
+                            "case-34e6a2__78t4qgk",
+                            "case-67b9d5__mXghBtN",
+                            "case-45f7b3__5vevnxz",
+                            "case-56a8c4__7u9TYFN",
+                            "case-78c0e6__tTdskMZ"
+                        ]
+                    },
+                    "completeness_ok": {
+                        "0.0": [
+                            "case-89d1f7__LqbkoiX"
+                        ],
+                        "1.0": [
+                            "case-23d5f1__9fdS67g",
+                            "case-01a7c9__afCSRi5",
+                            "case-12c4e8__ssnHiFy",
+                            "case-34e6a2__78t4qgk",
+                            "case-67b9d5__mXghBtN",
+                            "case-45f7b3__5vevnxz",
+                            "case-56a8c4__7u9TYFN",
+                            "case-78c0e6__tTdskMZ"
+                        ]
+                    },
+                    "disposition_ok": {
+                        "1.0": [
+                            "case-89d1f7__LqbkoiX",
+                            "case-23d5f1__9fdS67g",
+                            "case-01a7c9__afCSRi5",
+                            "case-12c4e8__ssnHiFy",
+                            "case-34e6a2__78t4qgk",
+                            "case-45f7b3__5vevnxz"
+                        ],
+                        "0.0": [
+                            "case-67b9d5__mXghBtN",
+                            "case-56a8c4__7u9TYFN",
+                            "case-78c0e6__tTdskMZ"
+                        ]
+                    },
+                    "duplicate_free": {
+                        "1.0": [
+                            "case-89d1f7__LqbkoiX",
+                            "case-23d5f1__9fdS67g",
+                            "case-01a7c9__afCSRi5",
+                            "case-12c4e8__ssnHiFy",
+                            "case-34e6a2__78t4qgk",
+                            "case-67b9d5__mXghBtN",
+                            "case-45f7b3__5vevnxz",
+                            "case-56a8c4__7u9TYFN",
+                            "case-78c0e6__tTdskMZ"
+                        ]
+                    },
+                    "legal_id": {
+                        "1.0": [
+                            "case-89d1f7__LqbkoiX",
+                            "case-23d5f1__9fdS67g",
+                            "case-01a7c9__afCSRi5",
+                            "case-12c4e8__ssnHiFy",
+                            "case-34e6a2__78t4qgk",
+                            "case-67b9d5__mXghBtN",
+                            "case-45f7b3__5vevnxz",
+                            "case-56a8c4__7u9TYFN",
+                            "case-78c0e6__tTdskMZ"
+                        ]
+                    },
+                    "nesting_ok": {
+                        "1.0": [
+                            "case-89d1f7__LqbkoiX",
+                            "case-23d5f1__9fdS67g",
+                            "case-01a7c9__afCSRi5",
+                            "case-12c4e8__ssnHiFy",
+                            "case-34e6a2__78t4qgk",
+                            "case-67b9d5__mXghBtN",
+                            "case-45f7b3__5vevnxz",
+                            "case-56a8c4__7u9TYFN",
+                            "case-78c0e6__tTdskMZ"
+                        ]
+                    },
+                    "reward": {
+                        "0.0": [
+                            "case-89d1f7__LqbkoiX",
+                            "case-67b9d5__mXghBtN",
+                            "case-56a8c4__7u9TYFN",
+                            "case-78c0e6__tTdskMZ"
+                        ],
+                        "1.0": [
+                            "case-23d5f1__9fdS67g",
+                            "case-01a7c9__afCSRi5",
+                            "case-12c4e8__ssnHiFy",
+                            "case-34e6a2__78t4qgk",
+                            "case-45f7b3__5vevnxz"
+                        ]
+                    },
+                    "safety_ok": {
+                        "1.0": [
+                            "case-89d1f7__LqbkoiX",
+                            "case-23d5f1__9fdS67g",
+                            "case-01a7c9__afCSRi5",
+                            "case-12c4e8__ssnHiFy",
+                            "case-34e6a2__78t4qgk",
+                            "case-67b9d5__mXghBtN",
+                            "case-45f7b3__5vevnxz",
+                            "case-56a8c4__7u9TYFN",
+                            "case-78c0e6__tTdskMZ"
+                        ]
+                    },
+                    "schema_valid": {
+                        "0.0": [
+                            "case-89d1f7__LqbkoiX"
+                        ],
+                        "1.0": [
+                            "case-23d5f1__9fdS67g",
+                            "case-01a7c9__afCSRi5",
+                            "case-12c4e8__ssnHiFy",
+                            "case-34e6a2__78t4qgk",
+                            "case-67b9d5__mXghBtN",
+                            "case-45f7b3__5vevnxz",
+                            "case-56a8c4__7u9TYFN",
+                            "case-78c0e6__tTdskMZ"
+                        ]
+                    }
+                },
+                "exception_stats": {
+                    "CancelledError": [
+                        "case-90e2a8__5tkfRMZ"
+                    ]
+                }
+            }
+        },
+        "n_input_tokens": 140885,
+        "n_cache_tokens": 91776,
+        "n_output_tokens": 7848,
+        "cost_usd": 0.31597250000000004
+    }
+}

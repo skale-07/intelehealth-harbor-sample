@@ -1,0 +1,16 @@
+{
+    "task": {
+        "path": "datasets/intelehealth-verify-v2/case-90e2a8",
+        "source": "intelehealth-verify-v2"
+    },
+    "trial_name": "case-90e2a8__5tkfRMZ",
+    "trials_dir": "jobs/intelehealth-verify-v2-gpt4o",
+    "agent": {
+        "name": "terminus-2",
+        "model_name": "gpt-4o",
+        "env": {
+            "OPENAI_API_KEY": "${OPENAI_API_KEY}"
+        }
+    },
+    "job_id": "d9d46590-0f66-4507-b95d-c5be0d0ca03a"
+}

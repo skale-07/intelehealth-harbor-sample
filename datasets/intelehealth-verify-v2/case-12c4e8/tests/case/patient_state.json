@@ -1,0 +1,13 @@
+{
+  "age": 12,
+  "answers": [
+    {
+      "free_text": "2 days",
+      "option_ids": [],
+      "question_id": "ID_6b85e860-b27a-46e6-a60f-a6c10eb8b7db"
+    }
+  ],
+  "label": "Synthetic fixture \u2014 not a real visit",
+  "protocol_id": "ID_c492cec3-f0e8-4ab1-8b31-fd2f3b557e0b",
+  "protocol_name": "Chest pain"
+}

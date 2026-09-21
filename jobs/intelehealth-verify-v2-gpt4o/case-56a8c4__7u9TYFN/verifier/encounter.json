@@ -1,0 +1,251 @@
+{
+  "engine_version": "3.0",
+  "grade": {
+    "criteria": {
+      "age_ok": 1.0,
+      "completeness_ok": 1.0,
+      "disposition_ok": 0.0,
+      "duplicate_free": 1.0,
+      "legal_id": 1.0,
+      "nesting_ok": 1.0,
+      "safety_ok": 1.0,
+      "schema_valid": 1.0
+    },
+    "reasons": [
+      "Submitted disposition 'refer' does not match synthetic demo expected 'local_management' (source=DEMO_POLICY, validated_clinically=false). Policy: escalate_option_ids present \u2192 urgent; else \u2192 local_management. Chest pain.json does not define this mapping."
+    ],
+    "reward": 0.0,
+    "verdict": "ESCALATE"
+  },
+  "kind": "intake_encounter",
+  "note": "CHW intake trace, not a clinician consult. History turns are the synthetic fixture. The last turn is the agent's one proposed action.",
+  "patient": {
+    "age": 55,
+    "label": "Synthetic fixture \u2014 not a real visit"
+  },
+  "protocol_id": "ID_c492cec3-f0e8-4ab1-8b31-fd2f3b557e0b",
+  "protocol_name": "Chest pain",
+  "schema_version": "0.1.0",
+  "steps": [
+    {
+      "free_text": "2 hours",
+      "kind": "answered",
+      "option_ids": [],
+      "option_texts": [],
+      "question_id": "ID_6b85e860-b27a-46e6-a60f-a6c10eb8b7db",
+      "question_text": "Since when have you had this symptom?",
+      "source": "fixture",
+      "t": 0
+    },
+    {
+      "free_text": null,
+      "kind": "answered",
+      "option_ids": [
+        "ID_0cf109a7-5669-4afd-b5a5-05678f765ec9"
+      ],
+      "option_texts": [
+        "Suddenly"
+      ],
+      "question_id": "ID_01f2916c-1675-495f-a49b-425cf8dae2c9",
+      "question_text": "How fast did this symptom develop?",
+      "source": "fixture",
+      "t": 1
+    },
+    {
+      "free_text": null,
+      "kind": "answered",
+      "option_ids": [
+        "ID_96949bd1-cf34-4d25-9d65-d0c6bd60cf56"
+      ],
+      "option_texts": [
+        "Centre of chest"
+      ],
+      "question_id": "ID_d693c0a4-8021-4c2c-9b3c-fe2ca352cf6a",
+      "question_text": "Which part of the chest do you feel pain?",
+      "source": "fixture",
+      "t": 2
+    },
+    {
+      "free_text": null,
+      "kind": "answered",
+      "option_ids": [
+        "ID_9ead6dc9-2c99-4689-a00f-7a609d6832f7"
+      ],
+      "option_texts": [
+        "Crushing"
+      ],
+      "question_id": "ID_3c1f1576-9508-4c74-a35e-3f75acf9da60",
+      "question_text": "How can you describe the character of chest pain?",
+      "source": "fixture",
+      "t": 3
+    },
+    {
+      "free_text": null,
+      "kind": "answered",
+      "option_ids": [
+        "ID_fabe45f8-6764-4d1e-8d0d-a40261db550c"
+      ],
+      "option_texts": [
+        "Very severe pain (7 to less than  9)"
+      ],
+      "question_id": "ID_b021c353-3d82-4a5c-8917-ff38d6662a7b",
+      "question_text": "How severe is the pain?",
+      "source": "fixture",
+      "t": 4
+    },
+    {
+      "free_text": null,
+      "kind": "answered",
+      "option_ids": [
+        "ID_753b626a-c30b-4429-bb02-e8b3decda82e"
+      ],
+      "option_texts": [
+        "Constant (Continuous)"
+      ],
+      "question_id": "ID_50cd4b8c-6e8d-4998-baaa-373c277e22b7",
+      "question_text": "Does the chest pain have any patterns during a 24 hr cycle?",
+      "source": "fixture",
+      "t": 5
+    },
+    {
+      "free_text": null,
+      "kind": "answered",
+      "option_ids": [
+        "ID_e7e21222-516f-4bb7-be53-06f1ba010bbe"
+      ],
+      "option_texts": [
+        "A few hours"
+      ],
+      "question_id": "ID_c23fe3d8-ba59-40d0-b2fc-4013cd21a87d",
+      "question_text": "How long does the chest pain last?",
+      "source": "fixture",
+      "t": 6
+    },
+    {
+      "free_text": null,
+      "kind": "answered",
+      "option_ids": [
+        "ID_02fcb080-4efa-4608-8f19-985938576463"
+      ],
+      "option_texts": [
+        "None"
+      ],
+      "question_id": "ID_a5beb441-0cc1-422b-9805-946de317e2dd",
+      "question_text": "What does relieve or lessen the chest pain?",
+      "source": "fixture",
+      "t": 7
+    },
+    {
+      "free_text": null,
+      "kind": "answered",
+      "option_ids": [
+        "ID_383a59a3-8a12-4098-b8b9-124eea1cd8bb"
+      ],
+      "option_texts": [
+        "Exertion"
+      ],
+      "question_id": "ID_7d090a35-4685-4063-9101-f5ca9dcdb11c",
+      "question_text": "What does increase or worsen the pain?",
+      "source": "fixture",
+      "t": 8
+    },
+    {
+      "free_text": null,
+      "kind": "answered",
+      "option_ids": [
+        "ID_7e612f07-cb15-4ea1-afdd-c714aacf64d8"
+      ],
+      "option_texts": [
+        "Increasing"
+      ],
+      "question_id": "ID_d203fe4b-4015-47cc-b999-c7cb0c6b9f7d",
+      "question_text": "How is chest pain progressing?",
+      "source": "fixture",
+      "t": 9
+    },
+    {
+      "free_text": null,
+      "kind": "answered",
+      "option_ids": [
+        "ID_253612f4-b3c6-41ec-826f-e76fc6b7cb19"
+      ],
+      "option_texts": [
+        "No"
+      ],
+      "question_id": "ID_8acf327f-18e6-48db-aba5-f9052276ed0c",
+      "question_text": "Does the pain move to other parts of the body?",
+      "source": "fixture",
+      "t": 10
+    },
+    {
+      "free_text": null,
+      "kind": "answered",
+      "option_ids": [
+        "ID_f55be4f7-196f-4afc-88fc-90127231e1ac"
+      ],
+      "option_texts": [
+        "Cough"
+      ],
+      "question_id": "ID_2a5f6982-0694-48b5-8faa-06241e5e2279",
+      "question_text": "Associated symptoms",
+      "source": "fixture",
+      "t": 11
+    },
+    {
+      "free_text": null,
+      "kind": "answered",
+      "option_ids": [
+        "ID_e27aa693-f730-4308-912a-58edaae5f822"
+      ],
+      "option_texts": [
+        "None"
+      ],
+      "question_id": "ID_f4f25bdb-2a37-417e-9387-78645ed31fbf",
+      "question_text": "Do you have any other symptoms?",
+      "source": "fixture",
+      "t": 12
+    },
+    {
+      "free_text": null,
+      "kind": "answered",
+      "option_ids": [
+        "ID_f9f4a188-9c0d-4ece-ad75-9c9a38760747"
+      ],
+      "option_texts": [
+        "No"
+      ],
+      "question_id": "ID_20412fe8-64a9-4a42-bfee-d868b2273262",
+      "question_text": "Have you taken any treatment (including self-medication or home remedies) or seen any health provider for this problem?",
+      "source": "fixture",
+      "t": 13
+    },
+    {
+      "free_text": "No treatment taken.",
+      "kind": "answered",
+      "option_ids": [],
+      "option_texts": [],
+      "question_id": "ID_3c11df65-58f2-4319-ba52-bddc2f0acb39",
+      "question_text": "Describe",
+      "source": "fixture",
+      "t": 14
+    },
+    {
+      "free_text": "No additional information.",
+      "kind": "answered",
+      "option_ids": [],
+      "option_texts": [],
+      "question_id": "ID_46dcaefb-657b-421c-a711-b839f28dfa8c",
+      "question_text": "Additional Information",
+      "source": "fixture",
+      "t": 15
+    },
+    {
+      "action": "close_and_act",
+      "disposition": "refer",
+      "kind": "proposal",
+      "role": "intake",
+      "source": "agent",
+      "t": 16
+    }
+  ]
+}

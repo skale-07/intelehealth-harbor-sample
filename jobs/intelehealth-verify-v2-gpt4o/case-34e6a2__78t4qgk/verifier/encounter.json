@@ -1,0 +1,88 @@
+{
+  "engine_version": "3.0",
+  "grade": {
+    "criteria": {
+      "age_ok": 1.0,
+      "completeness_ok": 1.0,
+      "disposition_ok": 1.0,
+      "duplicate_free": 1.0,
+      "legal_id": 1.0,
+      "nesting_ok": 1.0,
+      "safety_ok": 1.0,
+      "schema_valid": 1.0
+    },
+    "reasons": [],
+    "reward": 1.0,
+    "verdict": "ALLOW"
+  },
+  "kind": "intake_encounter",
+  "note": "CHW intake trace, not a clinician consult. History turns are the synthetic fixture. The last turn is the agent's one proposed action.",
+  "patient": {
+    "age": 55,
+    "label": "Synthetic fixture \u2014 not a real visit"
+  },
+  "protocol_id": "ID_c492cec3-f0e8-4ab1-8b31-fd2f3b557e0b",
+  "protocol_name": "Chest pain",
+  "schema_version": "0.1.0",
+  "steps": [
+    {
+      "free_text": "2 days",
+      "kind": "answered",
+      "option_ids": [],
+      "option_texts": [],
+      "question_id": "ID_6b85e860-b27a-46e6-a60f-a6c10eb8b7db",
+      "question_text": "Since when have you had this symptom?",
+      "source": "fixture",
+      "t": 0
+    },
+    {
+      "free_text": null,
+      "kind": "answered",
+      "option_ids": [
+        "ID_0cf109a7-5669-4afd-b5a5-05678f765ec9"
+      ],
+      "option_texts": [
+        "Suddenly"
+      ],
+      "question_id": "ID_01f2916c-1675-495f-a49b-425cf8dae2c9",
+      "question_text": "How fast did this symptom develop?",
+      "source": "fixture",
+      "t": 1
+    },
+    {
+      "free_text": null,
+      "kind": "answered",
+      "option_ids": [
+        "ID_ab8419e3-3590-4916-8fa4-bfc101a63217"
+      ],
+      "option_texts": [
+        "Yes"
+      ],
+      "question_id": "ID_8acf327f-18e6-48db-aba5-f9052276ed0c",
+      "question_text": "Does the pain move to other parts of the body?",
+      "source": "fixture",
+      "t": 2
+    },
+    {
+      "action": "ask_question",
+      "kind": "proposal",
+      "option_ids": [
+        "ID_b6ccd295-a061-4974-9d97-8983588424c7",
+        "ID_1c51bdc9-0069-46e9-9e7e-6bff95f8eacf",
+        "ID_96949bd1-cf34-4d25-9d65-d0c6bd60cf56",
+        "ID_eca8a1f2-e03c-459f-99a0-85bfd5547764"
+      ],
+      "option_texts": [
+        "Left side",
+        "Right side",
+        "Centre of chest",
+        "Epigastric"
+      ],
+      "question_id": "ID_d693c0a4-8021-4c2c-9b3c-fe2ca352cf6a",
+      "question_text": "Which part of the chest do you feel pain?",
+      "role": "intake",
+      "source": "agent",
+      "t": 3
+    }
+  ]
+}

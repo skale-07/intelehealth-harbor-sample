@@ -1,0 +1,44 @@
+{
+  "criteria": {
+    "age_ok": 1.0,
+    "completeness_ok": 0.0,
+    "disposition_ok": 1.0,
+    "duplicate_free": 1.0,
+    "legal_id": 1.0,
+    "nesting_ok": 1.0,
+    "safety_ok": 1.0,
+    "schema_valid": 0.0
+  },
+  "disposition_policy": {
+    "note": "Disposition mapping is synthetic demo policy, not encoded in the protocol.",
+    "source": "DEMO_POLICY",
+    "validated_clinically": false
+  },
+  "engine_version": "3.0",
+  "evidence": [],
+  "failed_criteria": [
+    "schema_valid",
+    "completeness_ok"
+  ],
+  "ground_truth_version": "protocol.json",
+  "protocol_id": "ID_c492cec3-f0e8-4ab1-8b31-fd2f3b557e0b",
+  "protocol_name": "Chest pain",
+  "reasons": [
+    "Proposal is missing or not a JSON object.",
+    "propose() raised: Protocol.get_legal_next_questions() missing 3 required positional arguments: 'selected_option_ids', 'answered_ids', and 'age'",
+    "Episode ended without close_and_act."
+  ],
+  "reward": 0.0,
+  "rules_checked": [
+    "schema_valid",
+    "legal_id",
+    "age_ok",
+    "nesting_ok",
+    "completeness_ok",
+    "safety_ok",
+    "disposition_ok",
+    "duplicate_free"
+  ],
+  "verdict": "BLOCK",
+  "verifier_version": "0.2.0"
+}

@@ -1,0 +1,24 @@
+# V2 hardened Chest pain tasks. Run from this folder:
+#   harbor run -c job-v2.yaml -a oracle -y -q
+#
+# Local QC (no Docker):
+#   python shared/build_v2_tasks.py
+#   python shared/check_v2_fixtures.py
+#   python shared/check_shortcuts.py
+
+job_name: intelehealth-verify-v2-oracle
+jobs_dir: jobs
+n_attempts: 1
+n_concurrent_trials: 10
+debug: false
+
+agents:
+  - name: oracle
+
+datasets:
+  - path: datasets/intelehealth-verify-v2
+
+environment:
+  type: docker
+  force_build: false
+  delete: true

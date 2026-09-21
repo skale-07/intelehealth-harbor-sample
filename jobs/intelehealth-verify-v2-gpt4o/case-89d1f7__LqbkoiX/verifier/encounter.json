@@ -1,0 +1,40 @@
+{
+  "engine_version": "3.0",
+  "grade": {
+    "criteria": {
+      "age_ok": 1.0,
+      "completeness_ok": 0.0,
+      "disposition_ok": 1.0,
+      "duplicate_free": 1.0,
+      "legal_id": 1.0,
+      "nesting_ok": 1.0,
+      "safety_ok": 1.0,
+      "schema_valid": 0.0
+    },
+    "reasons": [
+      "Proposal is missing or not a JSON object.",
+      "propose() raised: Protocol.get_legal_next_questions() missing 3 required positional arguments: 'selected_option_ids', 'answered_ids', and 'age'",
+      "Episode ended without close_and_act."
+    ],
+    "reward": 0.0,
+    "verdict": "BLOCK"
+  },
+  "kind": "intake_encounter",
+  "note": "CHW intake trace, not a clinician consult. Proposal turns are the agent. Answer turns are the hidden patient_script, applied only after ALLOW. The agent does not author answers.",
+  "patient": {
+    "age": 55,
+    "label": "Synthetic fixture \u2014 not a real visit"
+  },
+  "protocol_id": "ID_c492cec3-f0e8-4ab1-8b31-fd2f3b557e0b",
+  "protocol_name": "Chest pain",
+  "schema_version": "0.1.0",
+  "steps": [
+    {
+      "action": null,
+      "kind": "proposal",
+      "note": "Proposal missing or not a JSON object.",
+      "source": "agent",
+      "t": 0
+    }
+  ]
+}

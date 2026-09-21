@@ -1,0 +1,54 @@
+{
+  "criteria": {
+    "age_ok": 1.0,
+    "completeness_ok": 1.0,
+    "disposition_ok": 0.0,
+    "duplicate_free": 1.0,
+    "legal_id": 1.0,
+    "nesting_ok": 1.0,
+    "safety_ok": 1.0,
+    "schema_valid": 1.0
+  },
+  "disposition_policy": {
+    "note": "Disposition mapping is synthetic demo policy, not encoded in the protocol.",
+    "source": "DEMO_POLICY",
+    "validated_clinically": false
+  },
+  "engine_version": "3.0",
+  "evidence": [
+    {
+      "expected": "local_management",
+      "field": "disposition",
+      "note": "Disposition compared to DEMO_POLICY after close_and_act. Expected value is not shown to the agent before grading.",
+      "path": "expected_disposition",
+      "policy_id": "demo-chest-pain-disposition-v2",
+      "source": "demo_rules.json",
+      "source_kind": "DEMO_POLICY",
+      "submitted": "refer",
+      "triggered_option_ids": [],
+      "validated_clinically": false
+    }
+  ],
+  "failed_criteria": [
+    "disposition_ok"
+  ],
+  "ground_truth_version": "protocol.json",
+  "protocol_id": "ID_c492cec3-f0e8-4ab1-8b31-fd2f3b557e0b",
+  "protocol_name": "Chest pain",
+  "reasons": [
+    "Submitted disposition 'refer' does not match synthetic demo expected 'local_management' (source=DEMO_POLICY, validated_clinically=false). Policy: escalate_option_ids present \u2192 urgent; else \u2192 local_management. Chest pain.json does not define this mapping."
+  ],
+  "reward": 0.0,
+  "rules_checked": [
+    "schema_valid",
+    "legal_id",
+    "age_ok",
+    "nesting_ok",
+    "completeness_ok",
+    "safety_ok",
+    "disposition_ok",
+    "duplicate_free"
+  ],
+  "verdict": "ESCALATE",
+  "verifier_version": "0.2.0"
+}

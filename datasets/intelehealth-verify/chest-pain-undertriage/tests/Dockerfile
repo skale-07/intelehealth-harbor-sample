@@ -1,0 +1,8 @@
+FROM python:3.12-slim-bookworm
+WORKDIR /app
+RUN mkdir -p /app /tests/case /logs/verifier \
+    && pip install --no-cache-dir pytest
+COPY case/patient_state.json /tests/case/patient_state.json
+COPY case/protocol.json /tests/case/protocol.json
+COPY protocol_walker.py grade.py encounter.py proposal_schema.json demo_rules.json test.sh test_proposal.py /tests/
+RUN chmod +x /tests/test.sh

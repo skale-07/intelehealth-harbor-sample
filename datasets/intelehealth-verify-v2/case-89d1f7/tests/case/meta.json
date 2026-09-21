@@ -1,0 +1,8 @@
+{
+  "case_id": "case-89d1f7",
+  "pair_id": "pair-roll-01",
+  "policy_id": "demo-chest-pain-disposition-v2",
+  "suite": "rollout",
+  "task_kind": "rollout_intake",
+  "variant": "escalate"
+}

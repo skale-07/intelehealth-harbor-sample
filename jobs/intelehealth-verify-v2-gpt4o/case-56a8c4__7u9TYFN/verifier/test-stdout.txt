@@ -1,0 +1,10 @@
+{"verdict": "ESCALATE", "reward": 0.0, "reasons": ["Submitted disposition 'refer' does not match synthetic demo expected 'local_management' (source=DEMO_POLICY, validated_clinically=false). Policy: escalate_option_ids present \u2192 urgent; else \u2192 local_management. Chest pain.json does not define this mapping."]}
+....F                                                                    [100%]
+=================================== FAILURES ===================================
+___________________ test_oracle_or_passing_agent_scores_one ____________________
+/tests/test_proposal.py:52: in test_oracle_or_passing_agent_scores_one
+    assert payload["reward"] == 1.0
+E   assert 0.0 == 1.0
+=========================== short test summary info ============================
+FAILED ../tests/test_proposal.py::test_oracle_or_passing_agent_scores_one - a...
+1 failed, 4 passed in 0.02s

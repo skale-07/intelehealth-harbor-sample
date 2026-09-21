@@ -1,0 +1,21 @@
+Skipping image OS validation for hb__e1c3383ccdd332c063f70b54939586e0: docker inspect returned 1
+Parser warnings: - Extra text detected before JSON object
+- Extra text detected after JSON object
+Trajectory dumped to jobs/intelehealth-verify-v2-gpt4o/case-23d5f1__9fdS67g/agent/trajectory.json
+Parser warnings: - Extra text detected before JSON object
+- Extra text detected after JSON object
+Trajectory dumped to jobs/intelehealth-verify-v2-gpt4o/case-23d5f1__9fdS67g/agent/trajectory.json
+Parser warnings: - Extra text detected before JSON object
+- Extra text detected after JSON object
+Trajectory dumped to jobs/intelehealth-verify-v2-gpt4o/case-23d5f1__9fdS67g/agent/trajectory.json
+Parser warnings: - Extra text detected before JSON object
+- Extra text detected after JSON object
+Trajectory dumped to jobs/intelehealth-verify-v2-gpt4o/case-23d5f1__9fdS67g/agent/trajectory.json
+Parser warnings: - Extra text detected before JSON object
+- Extra text detected after JSON object
+Parser warnings: - Extra text detected before JSON object
+- Extra text detected after JSON object
+Trajectory dumped to jobs/intelehealth-verify-v2-gpt4o/case-23d5f1__9fdS67g/agent/trajectory.json
+Trajectory dumped to jobs/intelehealth-verify-v2-gpt4o/case-23d5f1__9fdS67g/agent/trajectory.json
+Collecting main service artifacts
+Skipping image OS validation for hb__d45b6b8cbe2619c4d91783fdb320d961: docker inspect returned 1

@@ -1,0 +1,719 @@
+{
+    "id": "ID_c492cec3-f0e8-4ab1-8b31-fd2f3b557e0b",
+    "text": "Chest pain",
+    "engineVersion": "3.0",
+    "display-mr": "छातीत दुखणे",
+    "display-hi": "छाती में दर्द",
+    "options": [
+        {
+            "id": "ID_6b85e860-b27a-46e6-a60f-a6c10eb8b7db",
+            "text": "Since when have you had this symptom?",
+            "display-mr": "तुम्हाला हे लक्षण केव्हापासून होते?",
+            "display-hi": "आपको यह लक्षण कब से है?",
+            "isRequired": true,
+            "multi-choice": false,
+            "options": [
+                {
+                    "id": "ID_17856462-7643-4c9c-a879-0b2548761471",
+                    "text": "Since when have you had this symptom?",
+                    "display-mr": "तुम्हाला हे लक्षण केव्हापासून होते?",
+                    "display-hi": "आपको यह लक्षण कब से है?",
+                    "input-type": "duration"
+                }
+            ]
+        },
+        {
+            "id": "ID_01f2916c-1675-495f-a49b-425cf8dae2c9",
+            "text": "How fast did this symptom develop?",
+            "display-mr": "ही लक्षणे किती वेगाने विकसित झाली?",
+            "display-hi": "यह लक्षण कितनी तेजी से बढ़ा?",
+            "isRequired": true,
+            "multi-choice": false,
+            "options": [
+                {
+                    "id": "ID_0cf109a7-5669-4afd-b5a5-05678f765ec9",
+                    "text": "Suddenly",
+                    "display-mr": "अचानक",
+                    "display-hi": "अचानक"
+                },
+                {
+                    "id": "ID_9a670465-8dbb-47ba-8919-687096341c1b",
+                    "text": "Slowly",
+                    "display-mr": "हळूहळू",
+                    "display-hi": "धीरे-धीरे"
+                }
+            ]
+        },
+        {
+            "id": "ID_d693c0a4-8021-4c2c-9b3c-fe2ca352cf6a",
+            "text": "Which part of the chest do you feel pain?",
+            "display-mr": "छातीच्या कोणत्या भागात तुम्हाला वेदना जाणवते/ दुखतेय़",
+            "display-hi": "छाती के किस हिस्से में आपको दर्द महसूस होता है?",
+            "isRequired": true,
+            "multi-choice": false,
+            "options": [
+                {
+                    "id": "ID_b6ccd295-a061-4974-9d97-8983588424c7",
+                    "text": "Left side",
+                    "display-mr": "डावी बाजू",
+                    "display-hi": "बायां हिस्सा"
+                },
+                {
+                    "id": "ID_1c51bdc9-0069-46e9-9e7e-6bff95f8eacf",
+                    "text": "Right side",
+                    "display-mr": "उजवी बाजू",
+                    "display-hi": "दायां हिस्सा"
+                },
+                {
+                    "id": "ID_96949bd1-cf34-4d25-9d65-d0c6bd60cf56",
+                    "text": "Centre of chest",
+                    "display-mr": "छातीच्या मध्यभागी",
+                    "display-hi": "छाती का मध्य"
+                },
+                {
+                    "id": "ID_eca8a1f2-e03c-459f-99a0-85bfd5547764",
+                    "text": "Epigastric",
+                    "display-mr": "अधिजठर (एपिगॅस्ट्रिक)",
+                    "display-hi": "ऊपरी पेट"
+                }
+            ]
+        },
+        {
+            "id": "ID_3c1f1576-9508-4c74-a35e-3f75acf9da60",
+            "text": "How can you describe the character of chest pain?",
+            "display-mr": "तुम्ही तुमच्या छातीतल्या दुखण्याचे कसे वर्णन कराल?",
+            "display-hi": "आप सीने के दर्द की स्थिति कैसे बता पाएंगे?",
+            "isRequired": true,
+            "multi-choice": false,
+            "options": [
+                {
+                    "id": "ID_380e97b1-a471-4698-8828-c8736d1bf069",
+                    "text": "Constricting",
+                    "display-mr": "कमी होत जाते/ संकुचित होते",
+                    "display-hi": "सिकुड़ने जैसा दर्द"
+                },
+                {
+                    "id": "ID_f79f97a1-ed40-4c37-b909-209e6df90ad7",
+                    "text": "Tearing",
+                    "display-mr": "अस्वस्थ वाटणारी वेदना",
+                    "display-hi": "चीरेने जैसा दर्द"
+                },
+                {
+                    "id": "ID_9ead6dc9-2c99-4689-a00f-7a609d6832f7",
+                    "text": "Crushing",
+                    "display-mr": "चिरडून टाकण्यासारखी वेदना",
+                    "display-hi": "दबने जैसा दर्द"
+                },
+                {
+                    "id": "ID_0594bbe7-49a5-4928-8d13-c6345d97132c",
+                    "text": "Sharp",
+                    "display-mr": "टोचल्यासारखी",
+                    "display-hi": "चुभने जैसा दर्द"
+                },
+                {
+                    "id": "ID_211cc900-3212-43e5-9ce1-d30fb33e05e8",
+                    "text": "Dull aching",
+                    "display-mr": "सतत होणारी मंद वेदना",
+                    "display-hi": "धीमा-धीमा दर्द"
+                },
+                {
+                    "id": "ID_96e56349-94fc-4b5c-bb66-425bdc7b1615",
+                    "text": "Burning",
+                    "display-mr": "जळजळ",
+                    "display-hi": "जलन जैसा दर्द"
+                },
+                {
+                    "id": "ID_823f9492-17b1-48d4-b2c6-a45d2b6de378",
+                    "text": "Heavy",
+                    "display-mr": "जड(पणा)",
+                    "display-hi": "भारी महसूस होने वाला दर्द"
+                },
+                {
+                    "id": "ID_9fd466a6-3b02-476b-a632-13cec38747f5",
+                    "text": "Tight",
+                    "display-mr": "घट्ट",
+                    "display-hi": "कसाव जैसा दर्द"
+                },
+                {
+                    "id": "ID_087a2391-6af9-445d-b00a-42cc8ada4798",
+                    "text": "Pleuritic",
+                    "display-mr": "फुफ्फुसात",
+                    "display-hi": "फेफड़े में सूजन वाला दर्द"
+                }
+            ]
+        },
+        {
+            "id": "ID_b021c353-3d82-4a5c-8917-ff38d6662a7b",
+            "text": "How severe is the pain?",
+            "display-mr": "वेदना किती गंभीर आहे?",
+            "display-hi": "दर्द कितना अधिक है?",
+            "isRequired": true,
+            "multi-choice": false,
+            "options": [
+                {
+                    "id": "ID_fb7f7085-cfca-44b5-9a45-b3a8273607c5",
+                    "text": "Mild pain (1 to less than  3)",
+                    "display-mr": "सौम्य वेदना (1 ते less than 3)",
+                    "display-hi": "हल्का दर्द (1 से less than 3)"
+                },
+                {
+                    "id": "ID_dff596b9-7b27-41e3-af2a-16314b5a760a",
+                    "text": "Moderate pain (3 to less than  5)",
+                    "display-mr": "मध्यम वेदना (3 ते less than 5)",
+                    "display-hi": "मध्यम दर्द (3 से less than 5)"
+                },
+                {
+                    "id": "ID_b2f321b9-27a1-43f1-a640-f0f4778812ea",
+                    "text": "Severe pain (5 to less than  7)",
+                    "display-mr": "तीव्र वेदना (5 ते less than 7)",
+                    "display-hi": "गंभीर दर्द (5 से less than 7)"
+                },
+                {
+                    "id": "ID_fabe45f8-6764-4d1e-8d0d-a40261db550c",
+                    "text": "Very severe pain (7 to less than  9)",
+                    "display-mr": "खूप तीव्र वेदना (7 ते less than 9)",
+                    "display-hi": "बहुत गंभीर दर्द (7 से less than 9)"
+                },
+                {
+                    "id": "ID_57a7f558-1937-4bdf-917d-504a9fa67195",
+                    "text": "Worst pain possible (9 to 10)",
+                    "display-mr": "सर्वात जास्त वेदना  (9 ते 10)",
+                    "display-hi": "असहनीय दर्द (9 से 10)"
+                }
+            ]
+        },
+        {
+            "id": "ID_50cd4b8c-6e8d-4998-baaa-373c277e22b7",
+            "text": "Does the chest pain have any patterns during a 24 hr cycle?",
+            "display-mr": "24 तासांमध्ये वेदनेचे काही चक्र आहे का?",
+            "display-hi": "क्या दर्द 24 घंटे के दौरान किसी विशेष तरीके से होता है?",
+            "isRequired": true,
+            "multi-choice": false,
+            "options": [
+                {
+                    "id": "ID_753b626a-c30b-4429-bb02-e8b3decda82e",
+                    "text": "Constant (Continuous)",
+                    "display-mr": "सलग (सतत)",
+                    "display-hi": "लगातार (निरंतर)"
+                },
+                {
+                    "id": "ID_7e81cef9-a769-4af1-897b-ae7990e965bc",
+                    "text": "Intermittent (comes & goes)",
+                    "display-mr": "मधूनमधून (येते आणि जाते)",
+                    "display-hi": "कभी आने वाला और कभी जाने वाला दर्द",
+                    "havingNestedQuestion": "true",
+                    "options": [
+                        {
+                            "id": "ID_e79a6ac0-934a-4e1f-8ab3-1961496399c3",
+                            "text": "In a day when do you feel the pain most?",
+                            "display-mr": "दिवसभरात तुम्हाला कोणत्या वेळेस सर्वात जास्त छातीत दुखते? (वेदना जाणवते)",
+                            "display-hi": "दिन में आपको सबसे अधिक दर्द कब महसूस होता है?",
+                            "isRequired": true,
+                            "multi-choice": false,
+                            "options": [
+                                {
+                                    "id": "ID_9170175e-ac0f-494a-8fa4-cbf6cb5bf28d",
+                                    "text": "Morning",
+                                    "display-mr": "सकाळी",
+                                    "display-hi": "सुबह"
+                                },
+                                {
+                                    "id": "ID_6fad6029-b9b6-4b30-af83-67eb2c686044",
+                                    "text": "Evening",
+                                    "display-mr": "संध्याकाळी",
+                                    "display-hi": "शाम"
+                                },
+                                {
+                                    "id": "ID_4d91ba36-8ec8-433a-a64d-575561cd10fa",
+                                    "text": "Night",
+                                    "display-mr": "रात्री",
+                                    "display-hi": "रात"
+                                },
+                                {
+                                    "id": "ID_f0866dc1-d551-48b0-bf79-2202bf23d92f",
+                                    "text": "Variable",
+                                    "display-mr": "बदलते",
+                                    "display-hi": "परिवर्तनीय"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "ID_c23fe3d8-ba59-40d0-b2fc-4013cd21a87d",
+            "text": "How long does the chest pain last?",
+            "display-mr": "छातीतील कळ/ दुखणे किती काळ राहते?",
+            "display-hi": "छाती का दर्द कितने समय तक रहता है?",
+            "isRequired": true,
+            "multi-choice": false,
+            "options": [
+                {
+                    "id": "ID_f824c753-a75a-4d31-9dbd-e6547bfafe46",
+                    "text": "A few seconds",
+                    "display-mr": "काही सेकंद",
+                    "display-hi": "कुछ सेकंड"
+                },
+                {
+                    "id": "ID_ae178fb0-ffd1-4137-a8d7-a67ee3274f1d",
+                    "text": "A few minutes",
+                    "display-mr": "काही मिनिटे",
+                    "display-hi": "कुछ मिनट"
+                },
+                {
+                    "id": "ID_e7e21222-516f-4bb7-be53-06f1ba010bbe",
+                    "text": "A few hours",
+                    "display-mr": "काही तास",
+                    "display-hi": "कुछ घंटे"
+                }
+            ]
+        },
+        {
+            "id": "ID_a5beb441-0cc1-422b-9805-946de317e2dd",
+            "text": "What does relieve or lessen the chest pain?",
+            "display-mr": "छातीतली कळ/ दुखणे कशामुळे थांबते किंवा कमी होते?",
+            "display-hi": "दर्द में किससे राहत मिलती है या कम होता है?",
+            "isRequired": true,
+            "multi-choice": true,
+            "options": [
+                {
+                    "id": "ID_02fcb080-4efa-4608-8f19-985938576463",
+                    "text": "None",
+                    "display-mr": "काहीही नाही",
+                    "display-hi": "कोई नहीं",
+                    "exclude-from-multi-choice": "true"
+                },
+                {
+                    "id": "ID_ca75ad62-35b2-4e0b-8edd-d4cda224b5fc",
+                    "text": "Rest",
+                    "display-mr": "विश्रांती",
+                    "display-hi": "आराम"
+                },
+                {
+                    "id": "ID_d2775086-5ec7-4af5-999c-3a014588bd0f",
+                    "text": "Sitting up",
+                    "display-mr": "बसल्याने",
+                    "display-hi": "बैठना"
+                },
+                {
+                    "id": "ID_817bfa4c-2514-49f3-847f-d4d755335253",
+                    "text": "Leaning forward",
+                    "display-mr": "पुढे वाकल्याने",
+                    "display-hi": "आगे झुकना"
+                },
+                {
+                    "id": "ID_34a4a384-6c20-4f59-9482-5dc736c4faa7",
+                    "text": "Pressure",
+                    "display-mr": "दाब",
+                    "display-hi": "दबाव"
+                },
+                {
+                    "id": "ID_abdcfec2-112d-4668-9ad4-a8574aae3eee",
+                    "text": "Medication",
+                    "display-mr": "औषधे",
+                    "display-hi": "दवाई"
+                }
+            ]
+        },
+        {
+            "id": "ID_7d090a35-4685-4063-9101-f5ca9dcdb11c",
+            "text": "What does increase or worsen the pain?",
+            "display-mr": "वेदना कशामुळे वाढते किंवा बिघडते?",
+            "display-hi": "क्या दर्द को बढ़ाता या बिगाड़ता है?",
+            "isRequired": true,
+            "multi-choice": true,
+            "options": [
+                {
+                    "id": "ID_d1f66d19-85c6-4939-bd70-0c32e4dfeb0e",
+                    "text": "None",
+                    "display-mr": "काहीही नाही",
+                    "display-hi": "कोई नहीं",
+                    "exclude-from-multi-choice": "true"
+                },
+                {
+                    "id": "ID_ccd281a7-cc17-4e00-8f08-89a288a70f92",
+                    "text": "Arm movements",
+                    "display-mr": "हातांची हालचाल",
+                    "display-hi": "भुजाओं की गति"
+                },
+                {
+                    "id": "ID_2aee2f3d-6787-488a-977e-abe4144dc0e6",
+                    "text": "Pressing on chest",
+                    "display-mr": "छातीतवर दाब आल्यामुळे",
+                    "display-hi": "छाती पर दबाने से"
+                },
+                {
+                    "id": "ID_383a59a3-8a12-4098-b8b9-124eea1cd8bb",
+                    "text": "Exertion",
+                    "display-mr": "मेहनत/ परिश्रम",
+                    "display-hi": "शारीरिक मेहनत करते समय"
+                },
+                {
+                    "id": "ID_ced87aad-6cb8-48c8-99c0-23dbb8338a19",
+                    "text": "Lying flat",
+                    "display-mr": "आडवे झोपल्याने",
+                    "display-hi": "पैर पसार कर लेटना"
+                },
+                {
+                    "id": "ID_d54ed407-f2e6-414b-bd3a-68d11aad4643",
+                    "text": "Lying on sides",
+                    "display-mr": "कुशीवर झोपल्याने",
+                    "display-hi": "किसी एक करवट पर लेटना"
+                },
+                {
+                    "id": "ID_39d597b5-ee0d-4b5b-8aef-fdefadcad337",
+                    "text": "Coughing",
+                    "display-mr": "खोकला",
+                    "display-hi": "खांसना"
+                },
+                {
+                    "id": "ID_be752347-0d0e-4b9d-915c-fd9279303290",
+                    "text": "Breathing",
+                    "display-mr": "श्वास घेणे",
+                    "display-hi": "सांस लेना"
+                },
+                {
+                    "id": "ID_69190530-3dcd-4cc2-aa26-400d18e7de0d",
+                    "text": "Food intake",
+                    "display-mr": "खाल्ल्याने",
+                    "display-hi": "खाना खाना"
+                },
+                {
+                    "id": "ID_4fc5d549-740f-434b-83c8-56f9e0e66acc",
+                    "text": "Menstrual period",
+                    "display-mr": "मासिक पाळी",
+                    "display-hi": "माहवारी",
+                    "age_min": "10"
+                },
+                {
+                    "id": "ID_cc15473e-1761-4958-9d32-6b7b27ddc48d",
+                    "text": "Other",
+                    "display-mr": "इतर",
+                    "display-hi": "अन्य"
+                }
+            ]
+        },
+        {
+            "id": "ID_d203fe4b-4015-47cc-b999-c7cb0c6b9f7d",
+            "text": "How is chest pain progressing?",
+            "display-mr": "छाती दुखणे वेदनेमध्ये काही बदल आहे का?",
+            "display-hi": "सीने में दर्द में कुछ बदलाव है क्या?",
+            "isRequired": true,
+            "multi-choice": false,
+            "options": [
+                {
+                    "id": "ID_7e612f07-cb15-4ea1-afdd-c714aacf64d8",
+                    "text": "Increasing",
+                    "display-mr": "वाढणे",
+                    "display-hi": "बढ़ता हुआ"
+                },
+                {
+                    "id": "ID_09955069-26c7-46fc-a461-a718016ec2d4",
+                    "text": "Decreasing",
+                    "display-mr": "कमी होणे",
+                    "display-hi": "घटता हुआ"
+                },
+                {
+                    "id": "ID_da79e06a-2343-4e7c-abc5-b127de9bd0e4",
+                    "text": "Recurrent (on & off)",
+                    "display-mr": "आवर्ती (चालू आणि बंद)",
+                    "display-hi": "बार-बार होना  (आता और जाता है)"
+                },
+                {
+                    "id": "ID_a52eb325-705a-4b25-81ca-b01680adcdc1",
+                    "text": "No change",
+                    "display-mr": "बदल नाही",
+                    "display-hi": "कोई बदलाव नहीं"
+                }
+            ]
+        },
+        {
+            "id": "ID_8acf327f-18e6-48db-aba5-f9052276ed0c",
+            "text": "Does the pain move to other parts of the body?",
+            "display-mr": "दुखणे/ कळ शरीराच्या अन्य भागांतही पसरते का?",
+            "display-hi": "क्या दर्द शरीर के अन्य हिस्सों में फैलता है?",
+            "isRequired": true,
+            "multi-choice": false,
+            "options": [
+                {
+                    "id": "ID_253612f4-b3c6-41ec-826f-e76fc6b7cb19",
+                    "text": "No",
+                    "display-mr": "नाही",
+                    "display-hi": "नहीं"
+                },
+                {
+                    "id": "ID_ab8419e3-3590-4916-8fa4-bfc101a63217",
+                    "text": "Yes",
+                    "display-mr": "होय",
+                    "display-hi": "हां",
+                    "havingNestedQuestion": "true",
+                    "options": [
+                        {
+                            "id": "ID_e9a1aaab-f1e9-4dbd-8c58-3c7e77995b3e",
+                            "text": "The pain moves to",
+                            "display-mr": "दुखणे/ कळ शरीराच्या या भागांतही पसरते",
+                            "display-hi": "दर्द कहां फैलता है?",
+                            "isRequired": true,
+                            "multi-choice": true,
+                            "options": [
+                                {
+                                    "id": "ID_cde9e257-f3f9-43f3-89ac-128783747ceb",
+                                    "text": "Left arm",
+                                    "display-mr": "डावा हात",
+                                    "display-hi": "बायीं भुजा"
+                                },
+                                {
+                                    "id": "ID_8991a4a5-2dce-473d-b951-0621d3840839",
+                                    "text": "Right arm",
+                                    "display-mr": "उजवा हात",
+                                    "display-hi": "दायीं भुजा"
+                                },
+                                {
+                                    "id": "ID_1d695160-34dd-456d-baae-6c69119db808",
+                                    "text": "Neck",
+                                    "display-mr": "मान",
+                                    "display-hi": "गर्दन"
+                                },
+                                {
+                                    "id": "ID_aa89d450-b747-4998-b470-2a9e7b0009c6",
+                                    "text": "Jaw",
+                                    "display-mr": "जबडा",
+                                    "display-hi": "जबड़ा"
+                                },
+                                {
+                                    "id": "ID_6dd5ebfd-5234-45c1-9e10-a1d93f9a4984",
+                                    "text": "Left Shoulder",
+                                    "display-mr": "डावा खांदा",
+                                    "display-hi": "बायां कंधा"
+                                },
+                                {
+                                    "id": "ID_6b299476-f87e-4798-b985-9e62a8f7de9e",
+                                    "text": "Right shoulder",
+                                    "display-mr": "उजवा खांदा",
+                                    "display-hi": "दायां कंधा"
+                                },
+                                {
+                                    "id": "ID_d2faa05c-d9c0-47f9-916f-36d23658c127",
+                                    "text": "Epigastrium",
+                                    "display-mr": "अधिजठर (एपिगॅस्ट्रिक)",
+                                    "display-hi": "ऊपरी पेट"
+                                },
+                                {
+                                    "id": "ID_aa248fd1-ad8f-4454-9135-5e214540017a",
+                                    "text": "Back",
+                                    "display-mr": "पाठ",
+                                    "display-hi": "पीठ"
+                                },
+                                {
+                                    "id": "ID_ea05b257-a80e-4427-a6e6-829d50c40582",
+                                    "text": "Other",
+                                    "display-mr": "अन्य",
+                                    "display-hi": "अन्य",
+                                    "input-type": "text"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "ID_2a5f6982-0694-48b5-8faa-06241e5e2279",
+            "text": "Associated symptoms",
+            "display-mr": "तुम्हाला खालील लक्षणे आहेत का?",
+            "display-hi": "क्या आपको निम्नलिखित लक्षण हैं?",
+            "isRequired": true,
+            "options": [
+                {
+                    "id": "ID_f55be4f7-196f-4afc-88fc-90127231e1ac",
+                    "text": "Cough",
+                    "display-mr": "खोकला",
+                    "display-hi": "खांसी"
+                },
+                {
+                    "id": "ID_51003f2b-659b-4098-9ea1-bd6a6824e7a4",
+                    "text": "Coughing up blood",
+                    "display-mr": "खोकल्यातून रक्त पडणे",
+                    "display-hi": "खांसते समय खून आना"
+                },
+                {
+                    "id": "ID_f11aa381-71db-4773-940a-2b44b7b0c5e9",
+                    "text": "Difficulty breathing",
+                    "display-mr": "श्वास घेण्यास त्रास होणे",
+                    "display-hi": "सांस लेने में कठिनाई"
+                },
+                {
+                    "id": "ID_eaec0dcb-7ad7-4fb5-b3b9-210aa51042ea",
+                    "text": "Palpitations",
+                    "display-mr": "छातीत धडधडणे",
+                    "display-hi": "दिल की धड़कन का तेज़ होना"
+                },
+                {
+                    "id": "ID_15ec220d-bfdd-4a85-9d02-27a796d2def9",
+                    "text": "Heartburn",
+                    "display-mr": "छातीत जळजळ",
+                    "display-hi": "सीने में जलन"
+                },
+                {
+                    "id": "ID_bfce918f-141b-44c9-aaca-34b3c8fbcad3",
+                    "text": "Difficulty swallowing",
+                    "display-mr": "गिळण्यास त्रास होणे",
+                    "display-hi": "निगलने में कठिनाई"
+                },
+                {
+                    "id": "ID_4f829c97-5b7e-4538-9951-0b103b7ab607",
+                    "text": "Regurgitation of food",
+                    "display-mr": "उलटी होणे (संपूर्ण अन्न बाहेर येणे)",
+                    "display-hi": "खाया हुआ खाना वापस आना"
+                },
+                {
+                    "id": "ID_a91931a4-5a21-492f-9101-ba8b463a0f9c",
+                    "text": "History of injury to chest wall",
+                    "display-mr": "छातीच्या बरगड्यांना मार लागल्याचा पूर्व इतिहास",
+                    "display-hi": "छाती में पहले से लगी हुई चोट का इतिहास"
+                }
+            ],
+            "display": "Do you have the following symptom(s)?"
+        },
+        {
+            "id": "ID_f4f25bdb-2a37-417e-9387-78645ed31fbf",
+            "text": "Do you have any other symptoms?",
+            "display-mr": "तुम्हाला खालील लक्षणे आहेत का?",
+            "display-hi": "क्या आपको निम्नलिखित लक्षण हैं?",
+            "isRequired": true,
+            "multi-choice": true,
+            "options": [
+                {
+                    "id": "ID_e27aa693-f730-4308-912a-58edaae5f822",
+                    "text": "None",
+                    "display-mr": "काहीही नाही",
+                    "display-hi": "कोई नहीं",
+                    "exclude-from-multi-choice": "true"
+                },
+                {
+                    "id": "ID_9b7263e5-54db-4874-a5ed-56e0c3450dd7",
+                    "text": "Fever",
+                    "display-mr": "ताप",
+                    "display-hi": "बुखार"
+                },
+                {
+                    "id": "ID_1df1ca82-82f2-4e13-9a54-3b06144b9d86",
+                    "text": "Chills & rigors",
+                    "display-mr": "थंडी भरुन येणे आणि कुडकुडणे",
+                    "display-hi": "ठंड और कंपकंपी"
+                },
+                {
+                    "id": "ID_4d99a378-dd13-4f38-bc03-91d9801f49fc",
+                    "text": "Nausea",
+                    "display-mr": "मळमळ (अन्नावरची वासना उडणे)",
+                    "display-hi": "उल्टी जैसा लगना"
+                },
+                {
+                    "id": "ID_cbfd9f28-e1b7-4fbf-b70c-cefac40d5214",
+                    "text": "Vomiting",
+                    "display-mr": "उलटी",
+                    "display-hi": "उल्टी"
+                },
+                {
+                    "id": "ID_85d07260-ab02-495a-9b5d-c4a81c1ab528",
+                    "text": "Excessive sweating",
+                    "display-mr": "अति जास्त घाम येणे",
+                    "display-hi": "अत्यधिक पसीना"
+                },
+                {
+                    "id": "ID_63bfc1ab-08e2-430a-8641-3b9965866746",
+                    "text": "Dizziness",
+                    "display-mr": "चक्कर येणे",
+                    "display-hi": "चक्कर आना"
+                },
+                {
+                    "id": "ID_eb2cd4bb-d56a-4cb4-aa06-e76ef12b7cb1",
+                    "text": "Fainting",
+                    "display-mr": "बेशुद्ध होणे",
+                    "display-hi": "बेहोशी"
+                },
+                {
+                    "id": "ID_e90dcb3a-45f6-486d-90ca-49c48b24442f",
+                    "text": "Fatigue",
+                    "display-mr": "थकवा",
+                    "display-hi": "थकान"
+                },
+                {
+                    "id": "ID_9ccc2f2e-e17f-4556-890c-938830828a1a",
+                    "text": "Loss of appetite",
+                    "display-mr": "भूक न लागणे",
+                    "display-hi": "भूख न लगना"
+                },
+                {
+                    "id": "ID_798d4a21-618e-4a70-96e9-732e86a3298b",
+                    "text": "Weight loss",
+                    "display-mr": "वजन कमी होणे",
+                    "display-hi": "वजन कम होना"
+                },
+                {
+                    "id": "ID_7e00ff7f-27c4-458b-b953-2cc9dcdef191",
+                    "text": "Other",
+                    "display-mr": "अन्य",
+                    "display-hi": "अन्य लक्षण",
+                    "input-type": "text"
+                }
+            ]
+        },
+        {
+            "id": "ID_20412fe8-64a9-4a42-bfee-d868b2273262",
+            "text": "Have you taken any treatment (including self-medication or home remedies) or seen any health provider for this problem?",
+            "display-mr": "तुम्ही यासाठी कोणतेही उपचार (स्वत: घेतलेली किंवा घरगुती औषधे घेतली आहेत का किंवा या समस्येसाठी वैद्यकीय मदत घेतली आहे का?",
+            "display-hi": "क्या आपने इस समस्या के लिए कोई उपचार (स्वयं दवाएं या घरेलू उपचार सहित) लिया है या किसी स्वास्थ्य प्रदाता से परामर्श किया है?",
+            "isRequired": true,
+            "multi-choice": false,
+            "options": [
+                {
+                    "id": "ID_f9f4a188-9c0d-4ece-ad75-9c9a38760747",
+                    "text": "No",
+                    "display-mr": "नाही",
+                    "display-hi": "नहीं"
+                },
+                {
+                    "id": "ID_c085a1e1-580d-4227-a928-b2a271e5b01e",
+                    "text": "Yes",
+                    "display-mr": "होय",
+                    "display-hi": "हां"
+                }
+            ]
+        },
+        {
+            "id": "ID_3c11df65-58f2-4319-ba52-bddc2f0acb39",
+            "text": "Describe",
+            "display-mr": "वर्णन करा",
+            "display-hi": "वर्णन करें",
+            "isRequired": true,
+            "options": [
+                {
+                    "id": "ID_87f25e74-7d2d-4251-ade6-20de7ba262bd",
+                    "text": "Describe",
+                    "display-mr": "वर्णन करा",
+                    "display-hi": "वर्णन करें",
+                    "input-type": "text"
+                }
+            ]
+        },
+        {
+            "id": "ID_46dcaefb-657b-421c-a711-b839f28dfa8c",
+            "text": "Additional Information",
+            "display-mr": "अतिरिक्त माहिती",
+            "display-hi": "अतिरिक्त जानकारी",
+            "isRequired": true,
+            "options": [
+                {
+                    "id": "ID_4d715c71-993e-4b06-b5c0-02a3b17a46fb",
+                    "text": "[Enter additional information]",
+                    "input-type": "text",
+                    "language": "%",
+                    "display-hi": "[अतिरिक्त जानकारी दर्ज करें]",
+                    "display-mr": "[अजून काही माहिती असल्यास भरा]"
+                }
+            ]
+        }
+    ]
+}

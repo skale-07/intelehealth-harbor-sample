@@ -1,0 +1,8 @@
+{
+  "case_id": "case-23d5f1",
+  "pair_id": "pair-nest-01",
+  "policy_id": null,
+  "suite": "nested_branch",
+  "task_kind": "one_shot_question",
+  "variant": "inactive"
+}

@@ -1,0 +1,11 @@
+#!/bin/bash
+set -u
+mkdir -p /logs/verifier
+python3 /tests/grade.py
+grade_status=$?
+python3 -m pytest /tests/test_proposal.py -q --tb=short
+pytest_status=$?
+if [ "$grade_status" -ne 0 ] || [ "$pytest_status" -ne 0 ]; then
+  exit 1
+fi
+exit 0

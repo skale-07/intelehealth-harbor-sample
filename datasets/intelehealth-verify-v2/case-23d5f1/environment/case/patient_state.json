@@ -1,0 +1,27 @@
+{
+  "age": 55,
+  "answers": [
+    {
+      "free_text": "2 days",
+      "option_ids": [],
+      "question_id": "ID_6b85e860-b27a-46e6-a60f-a6c10eb8b7db"
+    },
+    {
+      "free_text": null,
+      "option_ids": [
+        "ID_0cf109a7-5669-4afd-b5a5-05678f765ec9"
+      ],
+      "question_id": "ID_01f2916c-1675-495f-a49b-425cf8dae2c9"
+    },
+    {
+      "free_text": null,
+      "option_ids": [
+        "ID_253612f4-b3c6-41ec-826f-e76fc6b7cb19"
+      ],
+      "question_id": "ID_8acf327f-18e6-48db-aba5-f9052276ed0c"
+    }
+  ],
+  "label": "Synthetic fixture \u2014 not a real visit",
+  "protocol_id": "ID_c492cec3-f0e8-4ab1-8b31-fd2f3b557e0b",
+  "protocol_name": "Chest pain"
+}

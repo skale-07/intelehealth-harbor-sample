@@ -1,0 +1,11 @@
+{
+    "job_name": "intelehealth-verify-oracle-3task",
+    "jobs_dir": "harbor\\jobs",
+    "n_concurrent_trials": 1,
+    "quiet": true,
+    "datasets": [
+        {
+            "path": "harbor\\datasets\\intelehealth-verify"
+        }
+    ]
+}
